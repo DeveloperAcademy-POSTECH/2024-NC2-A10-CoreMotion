@@ -16,6 +16,9 @@
 		616C2F442C1DA5C200F63BBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C2F432C1DA5C200F63BBA /* ContentView.swift */; };
 		616C2F462C1DA5C300F63BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 616C2F452C1DA5C300F63BBA /* Assets.xcassets */; };
 		616C2F492C1DA5C300F63BBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 616C2F482C1DA5C300F63BBA /* Preview Assets.xcassets */; };
+		61C749102C1EF65B00E2EEC9 /* WatchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C7490F2C1EF65B00E2EEC9 /* WatchConnector.swift */; };
+		61C749132C1EF6A100E2EEC9 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C749122C1EF6A100E2EEC9 /* WatchConnectivity.framework */; };
+		61C749152C1EF77800E2EEC9 /* WatchToiOSConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C749142C1EF77800E2EEC9 /* WatchToiOSConnector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		616C2F432C1DA5C200F63BBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		616C2F452C1DA5C300F63BBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		616C2F482C1DA5C300F63BBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		61C7490F2C1EF65B00E2EEC9 /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
+		61C749122C1EF6A100E2EEC9 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
+		61C749142C1EF77800E2EEC9 /* WatchToiOSConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchToiOSConnector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C749132C1EF6A100E2EEC9 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +86,7 @@
 				616C2F2E2C1DA5C100F63BBA /* 2024-NC2-A10-CoreMotion */,
 				616C2F402C1DA5C200F63BBA /* 2024-NC2-A10-CoreMotion Watch App */,
 				616C2F2D2C1DA5C100F63BBA /* Products */,
+				61C749112C1EF6A100E2EEC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +104,7 @@
 			children = (
 				616C2F2F2C1DA5C100F63BBA /* _024_NC2_A10_CoreMotionApp.swift */,
 				616C2F312C1DA5C100F63BBA /* ContentView.swift */,
+				61C7490F2C1EF65B00E2EEC9 /* WatchConnector.swift */,
 				616C2F332C1DA5C200F63BBA /* Assets.xcassets */,
 				616C2F352C1DA5C200F63BBA /* Preview Content */,
 			);
@@ -117,6 +126,7 @@
 				616C2F432C1DA5C200F63BBA /* ContentView.swift */,
 				616C2F452C1DA5C300F63BBA /* Assets.xcassets */,
 				616C2F472C1DA5C300F63BBA /* Preview Content */,
+				61C749142C1EF77800E2EEC9 /* WatchToiOSConnector.swift */,
 			);
 			path = "2024-NC2-A10-CoreMotion Watch App";
 			sourceTree = "<group>";
@@ -127,6 +137,14 @@
 				616C2F482C1DA5C300F63BBA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		61C749112C1EF6A100E2EEC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61C749122C1EF6A100E2EEC9 /* WatchConnectivity.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				616C2F322C1DA5C100F63BBA /* ContentView.swift in Sources */,
+				61C749102C1EF65B00E2EEC9 /* WatchConnector.swift in Sources */,
 				616C2F302C1DA5C100F63BBA /* _024_NC2_A10_CoreMotionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				616C2F442C1DA5C200F63BBA /* ContentView.swift in Sources */,
+				61C749152C1EF77800E2EEC9 /* WatchToiOSConnector.swift in Sources */,
 				616C2F422C1DA5C200F63BBA /* _024_NC2_A10_CoreMotionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,9 +11,10 @@ struct ContentView: View {
     @State var rotY = 0.0
     @State var rotZ = 0.0
     
-    var motionData: [[Double]] = []
+    @State var motionData: [[Double]] = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
     
     private let motionManager = CMMotionManager()
+    @StateObject var watchConnector = WatchToiOSConnector()
     
     var body: some View {
         VStack {
@@ -80,8 +81,18 @@ extension ContentView {
         }
     }
     
+//    func sendDataToiOS( _ motionData: [[Double]]){
+////        let data = motionData
+//        watchConnector.sendDataToiOS(motionData: motionData)
+//    }
+    
     func stopRecordingDeviceMotion() {
+        
+        watchConnector.sendDataToiOS(motionData: motionData)
+        print("send!")
+//        motionData = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
         motionManager.stopDeviceMotionUpdates()
+        
     }
 }
 struct ContentView_Previews: PreviewProvider {
