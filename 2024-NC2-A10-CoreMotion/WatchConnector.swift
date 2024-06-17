@@ -38,12 +38,13 @@ class WatchConnector:  NSObject, WCSessionDelegate, ObservableObject {
 //        self.message = "123"
 //        print("message received!")
 //        print(message)
-        if let messageContent = message["A"] as? Double {
+        
+        if let messageContent = message["0"] as? String {
                     DispatchQueue.main.async {
                         self.message = String(messageContent)
                     }
             }
-        if let messageContent = message["B"] as? Double {
+        if let messageContent = message["1"] as? String {
             DispatchQueue.main.async {
                 self.message += String(messageContent)
             }

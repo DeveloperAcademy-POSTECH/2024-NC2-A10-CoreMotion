@@ -22,13 +22,18 @@ class WatchToiOSConnector:  NSObject, WCSessionDelegate, ObservableObject {
      
     }
     
+    func converMotionDataToMessage(motionData: [[Double]]) -> [String: String]{
+        var data: [String: String] = [:]
+        for (i, datum) in motionData.enumerated() {
+            let strings = datum.map { String($0) }
+            data[String(i), default: "0"] = strings.joined(separator: " ")
+        }
+        return data
+    }
+    
     func sendDataToiOS (motionData: [[Double]]) {
         if session.isReachable {
-            let data: [String: Double] = [
-                "A" : 0.0,
-                "B" : 0.0,
-                "C" : 0.0
-            ]
+            let data: [String: String] = self.converMotionDataToMessage(motionData: motionData)
             session.sendMessage(data, replyHandler: nil) { error in
                 print(error.localizedDescription)
             }

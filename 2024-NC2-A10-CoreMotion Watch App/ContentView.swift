@@ -14,7 +14,7 @@ struct ContentView: View {
     @State var motionData: [[Double]] = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
     
     private let motionManager = CMMotionManager()
-    @StateObject var watchConnector = WatchToiOSConnector()
+    @StateObject var watchToiOSConnector = WatchToiOSConnector()
     
     var body: some View {
         VStack {
@@ -88,9 +88,9 @@ extension ContentView {
     
     func stopRecordingDeviceMotion() {
         
-        watchConnector.sendDataToiOS(motionData: motionData)
+        watchToiOSConnector.sendDataToiOS(motionData: motionData)
         print("send!")
-//        motionData = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
+        motionData = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
         motionManager.stopDeviceMotionUpdates()
         
     }
