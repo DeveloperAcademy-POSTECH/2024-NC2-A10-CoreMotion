@@ -1,6 +1,7 @@
 /* watchOS에서 Core Motion 데이터 수집하기 */
 import SwiftUI
 import CoreMotion
+import CoreML
 
 struct ContentView: View {
     @State var accX = 0.0
@@ -10,21 +11,30 @@ struct ContentView: View {
     @State var rotX = 0.0
     @State var rotY = 0.0
     @State var rotZ = 0.0
-    
     @State var motionData: [[Double]] = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
     
+    @State var accXs = [0.0]
+    @State var accYs = [0.0]
+    @State var accZs = [0.0]
+    @State var rotXs = [0.0]
+    @State var rotYs = [0.0]
+    @State var rotZs = [0.0]
+    @State var prediction = ""
+    
+
     private let motionManager = CMMotionManager()
     @StateObject var watchToiOSConnector = WatchToiOSConnector()
+    let motionClassifier = try? DripMotionClassifier(configuration: .init())
     
     var body: some View {
         VStack {
             Text("accX: \(accX)")
             Text("accY: \(accY)")
             Text("accZ: \(accZ)")
-            Text("rotX: \(rotX)")
-            Text("rotY: \(rotY)")
-            Text("rotZ: \(rotZ)")
-
+//            Text("rotX: \(rotX)")
+//            Text("rotY: \(rotY)")
+//            Text("rotZ: \(rotZ)")
+            Text("Prediction: \(prediction)")
             HStack {
                 Button {
                     startRecordingDeviceMotion()
@@ -41,6 +51,12 @@ struct ContentView: View {
                     Text("Stop")
                         .font(.body)
                         .foregroundColor(.red)
+                }
+                Button {
+                    predict()
+                    print("predict")
+                } label: {
+                    Text("Predict")
                 }
             }
         }
@@ -77,17 +93,56 @@ extension ContentView {
             rotZ = rotationRate.z
             
             motionData.append([accX, accY, accZ, rotX, rotY, rotZ])
+            accXs.append(accX)
+            accYs.append(accY)
+            accZs.append(accZ)
+            rotXs.append(rotX)
+            rotYs.append(rotY)
+            rotZs.append(rotZ)
             
+//            let input = DripMotionClassifierInput(
+//                _0: getLast100motionDataMLArray(accXs),
+//                _1: getLast100motionDataMLArray(accYs),
+//                _2: getLast100motionDataMLArray(accZs),
+//                _3: getLast100motionDataMLArray(rotXs),
+//                _4: getLast100motionDataMLArray(rotYs),
+//                _5: getLast100motionDataMLArray(rotZs), 
+//                stateIn: MLMultiArray()
+//            )
+//            let output = try? motionClassifier?.prediction(input: input)
+//            prediction = output?.label ?? "측정불가"
         }
     }
+    func predict() {
+        let input = DripMotionClassifierInput(
+            _0: getLast100motionDataMLArray(accXs),
+            _1: getLast100motionDataMLArray(accYs),
+            _2: getLast100motionDataMLArray(accZs),
+            _3: getLast100motionDataMLArray(rotXs),
+            _4: getLast100motionDataMLArray(rotYs),
+            _5: getLast100motionDataMLArray(rotZs),
+            stateIn: MLMultiArray()
+        )
+        let output = try? motionClassifier?.prediction(input: input)
+        prediction = output?.label ?? "측정불가"
+    }
     
-//    func sendDataToiOS( _ motionData: [[Double]]){
-////        let data = motionData
-//        watchConnector.sendDataToiOS(motionData: motionData)
-//    }
+    func getLastNElements<T>(array: [T], count: Int) -> [T] {
+        return Array(array.suffix(count))
+    }
+
+    func getLast100motionDataMLArray(_ dataArray : [Double]) -> MLMultiArray {
+        var arr: [Double]
+        if dataArray.count < 100 {
+            arr = dataArray
+        }
+        
+        arr = getLastNElements(array: dataArray, count: 100)
+        let answer = try? MLMultiArray(arr)
+        return answer!
+    }
     
     func stopRecordingDeviceMotion() {
-        
         watchToiOSConnector.sendDataToiOS(motionData: motionData)
         print("send!")
         motionData = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
@@ -95,11 +150,6 @@ extension ContentView {
         
     }
 }
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
 
 
 #Preview {

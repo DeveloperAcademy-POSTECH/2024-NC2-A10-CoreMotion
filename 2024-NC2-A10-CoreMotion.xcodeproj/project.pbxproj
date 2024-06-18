@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1AD1C40D2C21A724008C42D2 /* DripMotionClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1AD1C40C2C21A724008C42D2 /* DripMotionClassifier.mlmodel */; };
+		1AD1C40E2C21A9EF008C42D2 /* DripMotionClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1AD1C40C2C21A724008C42D2 /* DripMotionClassifier.mlmodel */; };
 		616C2F302C1DA5C100F63BBA /* _024_NC2_A10_CoreMotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C2F2F2C1DA5C100F63BBA /* _024_NC2_A10_CoreMotionApp.swift */; };
 		616C2F322C1DA5C100F63BBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C2F312C1DA5C100F63BBA /* ContentView.swift */; };
 		616C2F342C1DA5C200F63BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 616C2F332C1DA5C200F63BBA /* Assets.xcassets */; };
@@ -273,6 +274,7 @@
 			files = (
 				616C2F442C1DA5C200F63BBA /* ContentView.swift in Sources */,
 				61C749152C1EF77800E2EEC9 /* WatchToiOSConnector.swift in Sources */,
+				1AD1C40E2C21A9EF008C42D2 /* DripMotionClassifier.mlmodel in Sources */,
 				616C2F422C1DA5C200F63BBA /* _024_NC2_A10_CoreMotionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
