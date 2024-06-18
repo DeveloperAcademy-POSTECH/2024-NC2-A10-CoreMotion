@@ -56,7 +56,7 @@ extension ContentView {
         }
         
         // 모션 갱신 주기 설정 (100Hz)
-        motionManager.deviceMotionUpdateInterval = 0.1
+        motionManager.deviceMotionUpdateInterval = 0.01
         // Device motion 업데이트 받기 시작
         motionManager.startDeviceMotionUpdates(to: .main) { (deviceMotion: CMDeviceMotion?, error: Error?) in
             guard let data = deviceMotion, error == nil else {
@@ -95,8 +95,13 @@ extension ContentView {
         
     }
 }
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
+
+
+#Preview {
+    ContentView()
 }
