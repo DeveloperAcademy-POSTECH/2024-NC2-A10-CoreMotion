@@ -1,13 +1,5 @@
-//
-//  PredictManager.swift
-//  2024-NC2-A10-CoreMotion
-//
-//  Created by Lyosha's MacBook   on 6/19/24.
-//
-
 import Foundation
 import CoreML
-
 
 class PredictManager: ObservableObject {
     @Published var motionClassifier = try? DripMotionClassifier(configuration: .init())
@@ -20,24 +12,39 @@ class PredictManager: ObservableObject {
             _3: getLast100motionDataMLArray(rotXs),
             _4: getLast100motionDataMLArray(rotYs),
             _5: getLast100motionDataMLArray(rotZs),
-            stateIn: try! MLMultiArray(shape: [400], dataType: .double)
+            stateIn: try! MLMultiArray(shape: [400], dataType: .double) // Ensure this shape is correct
         )
-        let output = try? motionClassifier?.prediction(input: input)
-        return output?.label ?? "측정불가"
+        // Log input data
+//               print("Input data:")
+//               print("accXs:", accXs)
+//               print("accYs:", accYs)
+//               print("accZs:", accZs)
+//               print("rotXs:", rotXs)
+//               print("rotYs:", rotYs)
+//               print("rotZs:", rotZs)
+        do {
+            let output = try motionClassifier?.prediction(input: input)
+            print("예측값: ", output?.label ?? "모름")
+            print("수치 : ", output?.labelProbability ?? "모름")
+            return output?.label ?? "측정불가"
+        } catch {
+            print("Prediction error: \(error)")
+            return "측정불가"
+        }
     }
     
     func getLastNElements<T>(array: [T], count: Int) -> [T] {
         return Array(array.suffix(count))
     }
 
-    func getLast100motionDataMLArray(_ dataArray : [Double]) -> MLMultiArray {
-        var arr: [Double]
-        if dataArray.count < 100 {
-            arr = dataArray
+    func getLast100motionDataMLArray(_ dataArray: [Double]) -> MLMultiArray {
+        let count = min(50, dataArray.count)
+        let arr = getLastNElements(array: dataArray, count: count)
+        let paddedArray = arr + Array(repeating: 0.0, count: 50 - count)
+        let answer = try? MLMultiArray(shape: [50], dataType: .double)
+        for (index, element) in paddedArray.enumerated() {
+            answer?[index] = NSNumber(value: element)
         }
-        
-        arr = getLastNElements(array: dataArray, count: 100)
-        let answer = try? MLMultiArray(arr)
         return answer!
     }
 }
