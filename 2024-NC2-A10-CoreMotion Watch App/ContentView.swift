@@ -100,17 +100,6 @@ extension ContentView {
             rotYs.append(rotY)
             rotZs.append(rotZ)
             
-//            let input = DripMotionClassifierInput(
-//                _0: getLast100motionDataMLArray(accXs),
-//                _1: getLast100motionDataMLArray(accYs),
-//                _2: getLast100motionDataMLArray(accZs),
-//                _3: getLast100motionDataMLArray(rotXs),
-//                _4: getLast100motionDataMLArray(rotYs),
-//                _5: getLast100motionDataMLArray(rotZs), 
-//                stateIn: MLMultiArray()
-//            )
-//            let output = try? motionClassifier?.prediction(input: input)
-//            prediction = output?.label ?? "측정불가"
         }
     }
     func predict() {
@@ -121,7 +110,7 @@ extension ContentView {
             _3: getLast100motionDataMLArray(rotXs),
             _4: getLast100motionDataMLArray(rotYs),
             _5: getLast100motionDataMLArray(rotZs),
-            stateIn: MLMultiArray()
+            stateIn: try! MLMultiArray(shape: [400], dataType: .double)
         )
         let output = try? motionClassifier?.prediction(input: input)
         prediction = output?.label ?? "측정불가"
