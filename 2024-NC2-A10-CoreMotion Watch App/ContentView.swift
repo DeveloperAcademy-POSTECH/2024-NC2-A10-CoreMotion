@@ -24,7 +24,8 @@ struct ContentView: View {
 
     private let motionManager = CMMotionManager()
     @StateObject var watchToiOSConnector = WatchToiOSConnector()
-    let motionClassifier = try? DripMotionClassifier(configuration: .init())
+    @StateObject var predictManager = PredictManager()
+//    let motionClassifier = try? DripMotionClassifier(configuration: .init())
     
     var body: some View {
         VStack {
@@ -53,7 +54,7 @@ struct ContentView: View {
                         .foregroundColor(.red)
                 }
                 Button {
-                    predict()
+                    prediction = predictManager.predict(accXs, accYs, accZs, rotXs, rotYs, rotZs)
                     print("predict")
                 } label: {
                     Text("Predict")
@@ -102,34 +103,7 @@ extension ContentView {
             
         }
     }
-    func predict() {
-        let input = DripMotionClassifierInput(
-            _0: getLast100motionDataMLArray(accXs),
-            _1: getLast100motionDataMLArray(accYs),
-            _2: getLast100motionDataMLArray(accZs),
-            _3: getLast100motionDataMLArray(rotXs),
-            _4: getLast100motionDataMLArray(rotYs),
-            _5: getLast100motionDataMLArray(rotZs),
-            stateIn: try! MLMultiArray(shape: [400], dataType: .double)
-        )
-        let output = try? motionClassifier?.prediction(input: input)
-        prediction = output?.label ?? "측정불가"
-    }
     
-    func getLastNElements<T>(array: [T], count: Int) -> [T] {
-        return Array(array.suffix(count))
-    }
-
-    func getLast100motionDataMLArray(_ dataArray : [Double]) -> MLMultiArray {
-        var arr: [Double]
-        if dataArray.count < 100 {
-            arr = dataArray
-        }
-        
-        arr = getLastNElements(array: dataArray, count: 100)
-        let answer = try? MLMultiArray(arr)
-        return answer!
-    }
     
     func stopRecordingDeviceMotion() {
         watchToiOSConnector.sendDataToiOS(motionData: motionData)
