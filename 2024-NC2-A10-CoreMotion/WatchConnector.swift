@@ -38,9 +38,7 @@ class WatchConnector:  NSObject, WCSessionDelegate, ObservableObject {
     
     
     internal func session(_ session: WCSession, didReceiveMessage message : [String: Any]){
-        //        self.message = "123"
-                print("message received!")
-        //        print(message)
+//        print("message received!")
         self.messageContent = message
         
         if let messageContent = message["0"] as? String {
@@ -53,8 +51,6 @@ class WatchConnector:  NSObject, WCSessionDelegate, ObservableObject {
                 self.message += String(messageContent)
             }
         }
-        
-//        self.exportDictionaryToCSV(data: message, fileName: "output.csv")
     }
     
     func sessionReachabilityDidChange(_ session: WCSession) {
@@ -62,7 +58,7 @@ class WatchConnector:  NSObject, WCSessionDelegate, ObservableObject {
     }
     
     func exportDictionaryToCSV() -> URL {
-        var data = self.messageContent
+        let data = self.messageContent
         var fileURL: URL!
         var csvString = "Key,Value\n"
         for (key, value) in data {
@@ -87,26 +83,4 @@ class WatchConnector:  NSObject, WCSessionDelegate, ObservableObject {
         }
         return fileURL
     }
-    //    func exportDictionaryToCSV(data: [String: Any], fileName: String) {
-    //        // Convert the dictionary to a CSV formatted string
-    //        var csvString = "Key,Value\n"
-    //        for (key, value) in data {
-    //            csvString += "\(key),\(String(describing: value))\n"
-    //        }
-    //
-    //        // Get the file path to save the CSV file
-    //        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-    //            let fileURL = dir.appendingPathComponent(fileName)
-    //
-    //            // Write the CSV string to the file
-    //            do {
-    //                try csvString.write(to: fileURL, atomically: true, encoding: .utf8)
-    //                print("CSV file saved successfully at \(fileURL.path)")
-    //            } catch {
-    //                print("Failed to write CSV file: \(error)")
-    //            }
-    //        }
-    //    }
-    
-    
 }

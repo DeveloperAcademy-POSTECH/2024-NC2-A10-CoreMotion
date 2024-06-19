@@ -1,109 +1,59 @@
 /* watchOS에서 Core Motion 데이터 수집하기 */
 import SwiftUI
 import CoreMotion
+import CoreML
 
 struct ContentView: View {
-    @State var accX = 0.0
-    @State var accY = 0.0
-    @State var accZ = 0.0
+
     
-    @State var rotX = 0.0
-    @State var rotY = 0.0
-    @State var rotZ = 0.0
-    
-    @State var motionData: [[Double]] = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
-    
+    @ObservedObject var viewModel: ViewModel
     private let motionManager = CMMotionManager()
     @StateObject var watchToiOSConnector = WatchToiOSConnector()
+    @State var isSessionEnd = false
     
     var body: some View {
-        Text("hello")
-//        VStack {
-//            Text("accX: \(accX)")
-//            Text("accY: \(accY)")
-//            Text("accZ: \(accZ)")
+        VStack {
+//            Text("accX: \(viewModel.accX)")
+//            Text("accY: \(viewModel.accY)")
+//            Text("accZ: \(viewModel.accZ)")
 //            Text("rotX: \(rotX)")
 //            Text("rotY: \(rotY)")
 //            Text("rotZ: \(rotZ)")
-//
-//            HStack {
+            Text("Prediction: \(viewModel.prediction)")
+            Text("PourTime: \(viewModel.pourTimeSum)")
+            HStack {
+                Button {
+                    viewModel.startRecordingDeviceMotion()
+                    viewModel.startDripSession()
+                    print("Device motion 업데이트 시작!!!")
+                
+                } label: {
+                    Text("Start")
+                        .font(.body)
+                        .foregroundColor(.green)
+                }
+                
+                Button {
+                    viewModel.stopRecordingDeviceMotion()
+                    viewModel.endDripSession()
+                } label: {
+                    Text("Stop")
+                        .font(.body)
+                        .foregroundColor(.red)
+                }
 //                Button {
-//                    startRecordingDeviceMotion()
-//                    print("Device motion 업데이트 시작!!!")
+////                    viewModel.prediction = viewModel.predictManager.predict(accXs, accYs, accZs, rotXs, rotYs, rotZs)
+//                    print("predict")
 //                } label: {
-//                    Text("Start")
-//                        .font(.body)
-//                        .foregroundColor(.green)
+//                    Text("Predict")
 //                }
-//                Button {
-//                    stopRecordingDeviceMotion()
-//                    print("Device motion 업데이트 종료!!!")
-//                } label: {
-//                    Text("Stop")
-//                        .font(.body)
-//                        .foregroundColor(.red)
-//                }
-//            }
-//        }
-    }
-}
-
-extension ContentView {
-    func startRecordingDeviceMotion() {
-        // Device motion을 수집 가능한지 확인
-        guard motionManager.isDeviceMotionAvailable else {
-            print("Device motion data is not available")
-            return
-        }
-        
-        // 모션 갱신 주기 설정 (100Hz)
-        motionManager.deviceMotionUpdateInterval = 0.01
-        // Device motion 업데이트 받기 시작
-        motionManager.startDeviceMotionUpdates(to: .main) { (deviceMotion: CMDeviceMotion?, error: Error?) in
-            guard let data = deviceMotion, error == nil else {
-                print("Failed to get device motion data: \(error?.localizedDescription ?? "Unknown error")")
-                return
             }
-            // 필요한 센서값 불러오기
-            let acceleration = data.userAcceleration
-            
-            accX = acceleration.x
-            accY = acceleration.y
-            accZ = acceleration.z
-            
-            let rotationRate: CMRotationRate = data.rotationRate
-            
-            rotX = rotationRate.x
-            rotY = rotationRate.y
-            rotZ = rotationRate.z
-            
-            motionData.append([accX, accY, accZ, rotX, rotY, rotZ])
-            
         }
     }
-    
-//    func sendDataToiOS( _ motionData: [[Double]]){
-////        let data = motionData
-//        watchConnector.sendDataToiOS(motionData: motionData)
-//    }
-    
-    func stopRecordingDeviceMotion() {
-        
-        watchToiOSConnector.sendDataToiOS(motionData: motionData)
-        print("send!")
-        motionData = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
-        motionManager.stopDeviceMotionUpdates()
-        
-    }
 }
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
 
 
 
 #Preview {
-    ContentView()
+    ContentView(viewModel: ViewModel())
 }
