@@ -25,8 +25,7 @@ struct DripEndView: View {
             }
             
             Text("1차 드립 완료")
-                .font(.system(size: 23))
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                .font(.custom("Pretendard-bold", size: 23))
                 .foregroundColor(.primaryYellow)
         }
     }

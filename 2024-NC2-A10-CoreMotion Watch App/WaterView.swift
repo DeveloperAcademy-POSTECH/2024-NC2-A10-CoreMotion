@@ -15,14 +15,12 @@ struct WaterView: View {
         VStack{
             HStack{
                 Text("1차 분사량")
-                    .font(.system(size: 23))
-                    .fontWeight(.bold)
+                    .font(.custom("Pretendard-Bold", size: 23))
                     .padding(.leading, 15)
                     .foregroundColor(.waterBlue)
                 
                 Spacer()
             }
-            ZStack{
                 HStack{
                     ZStack{
                         Picker("", selection: $option) {
@@ -46,18 +44,12 @@ struct WaterView: View {
                     .font(.system(size: 24))
                     
                     Text("ml")
-                        .font(.system(size: 32))
-                        .fontWeight(.semibold)
+                        .font(.custom("Pretendard-semiBold", size: 32))
                         .foregroundColor(.waterBlue)
                         .padding(.leading, 5)
                         .padding(.top)
                 }
-                
-            }
-            .padding(.bottom)
-            
-            
-            
+                .padding(.bottom)
             
             ZStack{
                 RoundedRectangle(cornerRadius: 20)
@@ -65,7 +57,7 @@ struct WaterView: View {
                     .foregroundColor(.lightGreen)
                 Text("완료")
                     .foregroundColor(.black)
-                    .fontWeight(.semibold)
+                    .font(.custom("Pretendard-Bold", size: 16))
             }
             .padding(.top)
             

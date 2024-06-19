@@ -15,9 +15,8 @@ struct StartView: View {
             VStack{
                 HStack{
                     Text("Drip Tracker")
+                        .font(.custom("Pretendard-extrabold", size: 17))
                         .foregroundStyle(.primaryYellow)
-                        .font(.headline)
-                        .fontWeight(.bold)
                         .padding(.leading, 7)
                     Spacer()
                 }
@@ -27,8 +26,7 @@ struct StartView: View {
 
             HStack{
                 Text("드리퍼 선택")
-                    .font(.system(size: 23))
-                    .fontWeight(.semibold)
+                    .font(.custom("Pretendard-semibold", size: 15))
                     .padding(.leading, 15)
                 Spacer()
             }
@@ -42,16 +40,13 @@ struct StartView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .frame(width: 88, height: 88)
                         .foregroundStyle(.waterBlue)
-                    VStack{
+                    VStack(alignment: .leading, spacing: -3){
                         Text("Hario")
+                            .font(.custom("Pretendard-semibold", size: 28))
                             .foregroundStyle(.black)
-                            .font(.title2)
-                            .fontWeight(.semibold)
                         Text("하리오")
+                            .font(.custom("Pretendard-regular", size: 13))
                             .foregroundStyle(.black)
-                            .font(.caption)
-                            .padding(.leading, -30)
-                            .padding(.top, -12)
                     }
                 }
                 Spacer()
@@ -60,16 +55,13 @@ struct StartView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .frame(width: 88, height: 88)
                         .foregroundStyle(.lightGreen)
-                    VStack{
+                    VStack(alignment: .leading, spacing: -3){
                         Text("Kalita")
+                            .font(.custom("Pretendard-semibold", size: 28))
                             .foregroundStyle(.black)
-                            .font(.title2)
-                            .fontWeight(.semibold)
                         Text("칼리타")
+                            .font(.custom("Pretendard-regular", size: 13))
                             .foregroundStyle(.black)
-                            .font(.caption)
-                            .padding(.trailing, 33)
-                            .padding(.top, -12)
                     }
                 }
             }
