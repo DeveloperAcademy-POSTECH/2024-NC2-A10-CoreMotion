@@ -17,34 +17,33 @@ struct ContentView: View {
     @StateObject var watchToiOSConnector = WatchToiOSConnector()
     
     var body: some View {
-        Text("hello")
-//        VStack {
-//            Text("accX: \(accX)")
-//            Text("accY: \(accY)")
-//            Text("accZ: \(accZ)")
-//            Text("rotX: \(rotX)")
-//            Text("rotY: \(rotY)")
-//            Text("rotZ: \(rotZ)")
-//
-//            HStack {
-//                Button {
-//                    startRecordingDeviceMotion()
-//                    print("Device motion 업데이트 시작!!!")
-//                } label: {
-//                    Text("Start")
-//                        .font(.body)
-//                        .foregroundColor(.green)
-//                }
-//                Button {
-//                    stopRecordingDeviceMotion()
-//                    print("Device motion 업데이트 종료!!!")
-//                } label: {
-//                    Text("Stop")
-//                        .font(.body)
-//                        .foregroundColor(.red)
-//                }
-//            }
-//        }
+        VStack {
+            Text("accX: \(accX)")
+            Text("accY: \(accY)")
+            Text("accZ: \(accZ)")
+            Text("rotX: \(rotX)")
+            Text("rotY: \(rotY)")
+            Text("rotZ: \(rotZ)")
+
+            HStack {
+                Button {
+                    startRecordingDeviceMotion()
+                    print("Device motion 업데이트 시작!!!")
+                } label: {
+                    Text("Start")
+                        .font(.body)
+                        .foregroundColor(.green)
+                }
+                Button {
+                    stopRecordingDeviceMotion()
+                    print("Device motion 업데이트 종료!!!")
+                } label: {
+                    Text("Stop")
+                        .font(.body)
+                        .foregroundColor(.red)
+                }
+            }
+        }
     }
 }
 
@@ -101,7 +100,6 @@ extension ContentView {
 //        ContentView()
 //    }
 //}
-
 
 
 #Preview {
