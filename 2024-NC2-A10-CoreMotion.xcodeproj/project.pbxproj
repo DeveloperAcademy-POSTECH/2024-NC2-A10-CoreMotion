@@ -28,6 +28,15 @@
 		DC62AE0D2C21AE3D00D68AF7 /* EndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AE0C2C21AE3D00D68AF7 /* EndView.swift */; };
 		DC62AE0F2C21CD8F00D68AF7 /* DripEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AE0E2C21CD8F00D68AF7 /* DripEndView.swift */; };
 		DC62AE112C22076600D68AF7 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AE102C22076600D68AF7 /* ListView.swift */; };
+		DC62AE1C2C22A69000D68AF7 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC62AE132C22A69000D68AF7 /* Pretendard-Medium.otf */; };
+		DC62AE1D2C22A69000D68AF7 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC62AE142C22A69000D68AF7 /* Pretendard-Bold.otf */; };
+		DC62AE1E2C22A69000D68AF7 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC62AE152C22A69000D68AF7 /* Pretendard-ExtraBold.otf */; };
+		DC62AE1F2C22A69000D68AF7 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC62AE162C22A69000D68AF7 /* Pretendard-SemiBold.otf */; };
+		DC62AE202C22A69000D68AF7 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC62AE172C22A69000D68AF7 /* Pretendard-Thin.otf */; };
+		DC62AE212C22A69000D68AF7 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC62AE182C22A69000D68AF7 /* Pretendard-ExtraLight.otf */; };
+		DC62AE222C22A69000D68AF7 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC62AE192C22A69000D68AF7 /* Pretendard-Black.otf */; };
+		DC62AE232C22A69000D68AF7 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC62AE1A2C22A69000D68AF7 /* Pretendard-Light.otf */; };
+		DC62AE242C22A69000D68AF7 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC62AE1B2C22A69000D68AF7 /* Pretendard-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +85,17 @@
 		DC62AE0C2C21AE3D00D68AF7 /* EndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndView.swift; sourceTree = "<group>"; };
 		DC62AE0E2C21CD8F00D68AF7 /* DripEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DripEndView.swift; sourceTree = "<group>"; };
 		DC62AE102C22076600D68AF7 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		DC62AE132C22A69000D68AF7 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Medium.otf"; path = "../../../../Downloads/Pretendard-1/public/static/Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		DC62AE142C22A69000D68AF7 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Bold.otf"; path = "../../../../Downloads/Pretendard-1/public/static/Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		DC62AE152C22A69000D68AF7 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-ExtraBold.otf"; path = "../../../../Downloads/Pretendard-1/public/static/Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		DC62AE162C22A69000D68AF7 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-SemiBold.otf"; path = "../../../../Downloads/Pretendard-1/public/static/Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		DC62AE172C22A69000D68AF7 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Thin.otf"; path = "../../../../Downloads/Pretendard-1/public/static/Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		DC62AE182C22A69000D68AF7 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-ExtraLight.otf"; path = "../../../../Downloads/Pretendard-1/public/static/Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		DC62AE192C22A69000D68AF7 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Black.otf"; path = "../../../../Downloads/Pretendard-1/public/static/Pretendard-Black.otf"; sourceTree = "<group>"; };
+		DC62AE1A2C22A69000D68AF7 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Light.otf"; path = "../../../../Downloads/Pretendard-1/public/static/Pretendard-Light.otf"; sourceTree = "<group>"; };
+		DC62AE1B2C22A69000D68AF7 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Regular.otf"; path = "../../../../Downloads/Pretendard-1/public/static/Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		DC62AE252C22A8A900D68AF7 /* -024-NC2-A10-CoreMotion-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "-024-NC2-A10-CoreMotion-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		DC62AE262C22A93500D68AF7 /* -024-NC2-A10-CoreMotion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "-024-NC2-A10-CoreMotion-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +139,7 @@
 		616C2F2E2C1DA5C100F63BBA /* 2024-NC2-A10-CoreMotion */ = {
 			isa = PBXGroup;
 			children = (
+				DC62AE262C22A93500D68AF7 /* -024-NC2-A10-CoreMotion-Info.plist */,
 				616C2F2F2C1DA5C100F63BBA /* _024_NC2_A10_CoreMotionApp.swift */,
 				616C2F312C1DA5C100F63BBA /* ContentView.swift */,
 				61C7490F2C1EF65B00E2EEC9 /* WatchConnector.swift */,
@@ -139,6 +160,8 @@
 		616C2F402C1DA5C200F63BBA /* 2024-NC2-A10-CoreMotion Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				DC62AE252C22A8A900D68AF7 /* -024-NC2-A10-CoreMotion-Watch-App-Info.plist */,
+				DC62AE122C22A5DD00D68AF7 /* Fonts */,
 				616C2F412C1DA5C200F63BBA /* _024_NC2_A10_CoreMotionApp.swift */,
 				DC62AE022C21ACED00D68AF7 /* StartView.swift */,
 				DC62AE042C21AD3900D68AF7 /* ControlView.swift */,
@@ -170,6 +193,22 @@
 				61C749122C1EF6A100E2EEC9 /* WatchConnectivity.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC62AE122C22A5DD00D68AF7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DC62AE192C22A69000D68AF7 /* Pretendard-Black.otf */,
+				DC62AE142C22A69000D68AF7 /* Pretendard-Bold.otf */,
+				DC62AE152C22A69000D68AF7 /* Pretendard-ExtraBold.otf */,
+				DC62AE182C22A69000D68AF7 /* Pretendard-ExtraLight.otf */,
+				DC62AE1A2C22A69000D68AF7 /* Pretendard-Light.otf */,
+				DC62AE132C22A69000D68AF7 /* Pretendard-Medium.otf */,
+				DC62AE1B2C22A69000D68AF7 /* Pretendard-Regular.otf */,
+				DC62AE162C22A69000D68AF7 /* Pretendard-SemiBold.otf */,
+				DC62AE172C22A69000D68AF7 /* Pretendard-Thin.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +301,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC62AE212C22A69000D68AF7 /* Pretendard-ExtraLight.otf in Resources */,
+				DC62AE242C22A69000D68AF7 /* Pretendard-Regular.otf in Resources */,
 				616C2F492C1DA5C300F63BBA /* Preview Assets.xcassets in Resources */,
+				DC62AE1D2C22A69000D68AF7 /* Pretendard-Bold.otf in Resources */,
+				DC62AE1F2C22A69000D68AF7 /* Pretendard-SemiBold.otf in Resources */,
+				DC62AE222C22A69000D68AF7 /* Pretendard-Black.otf in Resources */,
+				DC62AE232C22A69000D68AF7 /* Pretendard-Light.otf in Resources */,
+				DC62AE202C22A69000D68AF7 /* Pretendard-Thin.otf in Resources */,
+				DC62AE1E2C22A69000D68AF7 /* Pretendard-ExtraBold.otf in Resources */,
 				DC62ADFF2C219D7F00D68AF7 /* Assets.xcassets in Resources */,
 				616C2F462C1DA5C300F63BBA /* Assets.xcassets in Resources */,
+				DC62AE1C2C22A69000D68AF7 /* Pretendard-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +484,7 @@
 				DEVELOPMENT_TEAM = 33WFSQ847V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "-024-NC2-A10-CoreMotion-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "2024-NC2-A10-CoreMotion";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.nc2.coremotion.-024-NC2-A10-CoreMotion-Design";
@@ -468,6 +517,7 @@
 				DEVELOPMENT_TEAM = 33WFSQ847V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "-024-NC2-A10-CoreMotion-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "2024-NC2-A10-CoreMotion";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.nc2.coremotion.-024-NC2-A10-CoreMotion-Design";
@@ -501,6 +551,7 @@
 				DEVELOPMENT_TEAM = 33WFSQ847V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "-024-NC2-A10-CoreMotion-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "2024-NC2-A10-CoreMotion";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -534,6 +585,7 @@
 				DEVELOPMENT_TEAM = 33WFSQ847V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "-024-NC2-A10-CoreMotion-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "2024-NC2-A10-CoreMotion";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

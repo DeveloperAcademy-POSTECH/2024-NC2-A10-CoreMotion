@@ -11,7 +11,7 @@ import SwiftUI
 struct _024_NC2_A10_CoreMotion_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DripView()
         }
     }
 }

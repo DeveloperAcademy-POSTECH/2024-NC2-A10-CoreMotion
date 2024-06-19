@@ -12,12 +12,14 @@ struct EndView: View {
         VStack{
             HStack{
                 Text("2024. 06. 10")
-                    .font(.system(size: 11))
-                    .fontWeight(.medium)
+                    .font(.custom("Pretendard-medium", size: 11))
                     .padding(.leading, 20)
                 Spacer()
-//                Image(systemName: "star")
-//                    .imageScale(.small)
+                Text("하리오")
+                    .font(.custom("Pretendard-Bold", size: 11))
+                    .fontWeight(.medium)
+                    .padding(.trailing, 20)
+                    .foregroundColor(.waterBlue)
             }
             HStack{
                 ZStack{
@@ -25,125 +27,77 @@ struct EndView: View {
                         .frame(width: 86.5, height: 77)
                         .foregroundStyle(.primaryYellow)
                         .opacity(0.3)
-                    VStack{
-                        Text("원두 양")
-                            .font(.system(size: 9))
-                            .fontWeight(.medium)
-//                            .foregroundStyle(.primaryYellow)
+                    Text("원두 양")
+                            .font(.custom("Pretendard-medium", size: 9))
                             .padding(.trailing, 43)
-//                            .padding(.bottom, 1)
-
-                        Text("10g")
-                            .font(.system(size: 27))
-                            .fontWeight(.semibold)
+                            .padding(.bottom, 45)
+                    Text("10g")
+                            .font(.custom("Pretendard-semibold", size: 25))
                             .foregroundStyle(.primaryYellow)
-//                            .padding(.top)
-                            .padding(.bottom, 8)
-                    }
+                            .padding(.top, 3)
                 }
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
                         .frame(width: 86.5, height: 77)
                         .foregroundStyle(.lightGreen)
                         .opacity(0.3)
-                    
                     Text("비율")
-                        .font(.system(size: 9))
-                        .fontWeight(.medium)
-//                        .foregroundStyle(.lightGreen)
+                        .font(.custom("Pretendard-medium", size: 9))
                         .padding(.trailing, 52)
-                        .padding(.bottom, 40)
-                    
-                    Text("1 : 1.15")
-                        .font(.system(size: 25))
-                        .fontWeight(.semibold)
+                        .padding(.bottom, 45)
+                    Text("1:1.5")
+                        .font(.custom("Pretendard-semibold", size: 25))
                         .foregroundStyle(.lightGreen)
+                        .padding(.top, 3)
                 }
             }
             Spacer()
                 .frame(width: 5)
-
-                
             ZStack{
                 RoundedRectangle(cornerRadius: 10)
                     .frame(width: 178, height: 91)
                     .foregroundStyle(.waterBlue)
                     .opacity(0.3)
-                VStack{
-                    HStack{
+                HStack{
+                    VStack(alignment: .leading, spacing: 6){
                         Text("차수")
-                            .font(.system(size: 9))
-                            .fontWeight(.medium)
+                            .font(.custom("Pretendard-regular", size: 9))
                             .foregroundStyle(.waterBlue)
-                            .padding(.leading, 18)
-                        Spacer()
-                        Text("분사량")
-                            .font(.system(size: 9))
-                            .fontWeight(.medium)
-                            .padding(.trailing, 15)
-                        Spacer()
-                        Text("분사 시간")
-                            .font(.system(size: 9))
-                            .fontWeight(.medium)
-                            .padding(.trailing, 28)
-                    }
-                    .padding(.bottom, 5)
-                    HStack{
                         Text("1차")
-                            .font(.system(size: 11))
-                            .fontWeight(.bold)
+                            .font(.custom("Pretendard-Bold", size: 11))
                             .foregroundStyle(.waterBlue)
-                            .padding(.leading, 18)
-                        Spacer()
-                        Text("100ml")
-                            .font(.system(size: 11))
-                            .fontWeight(.bold)
-                            .padding(.trailing, 1)
-                        Spacer()
-                        Text("30초")
-                            .font(.system(size: 11))
-                            .fontWeight(.bold)
-                            .padding(.trailing, 35)
-                    }
-                    .padding(.top, 1)
-                    .padding(.bottom, 1)
-
-                    HStack{
                         Text("2차")
-                            .font(.system(size: 11))
-                            .fontWeight(.bold)
+                            .font(.custom("Pretendard-Bold", size: 11))
                             .foregroundStyle(.waterBlue)
-                            .padding(.leading, 18)
-                        Spacer()
-                        Text("120ml")
-                            .font(.system(size: 11))
-                            .fontWeight(.bold)
-                            .padding(.trailing, 1)
-                        Spacer()
-                        Text("80초")
-                            .font(.system(size: 11))
-                            .fontWeight(.bold)
-                            .padding(.trailing, 35)
-                    }
-                    .padding(.bottom, 1)
-
-                    HStack{
                         Text("3차")
-                            .font(.system(size: 11))
-                            .fontWeight(.bold)
+                            .font(.custom("Pretendard-Bold", size: 11))
                             .foregroundStyle(.waterBlue)
-                            .padding(.leading, 18)
-                        Spacer()
-                        Text("80ml")
-                            .font(.system(size: 11))
-                            .fontWeight(.bold)
-                            .padding(.trailing, 6)
-                        Spacer()
-                        Text("10초")
-                            .font(.system(size: 11))
-                            .fontWeight(.bold)
-                            .padding(.trailing, 36)
                     }
+                    .padding(.leading, 20)
+                    Spacer()
+                    VStack(alignment: .leading, spacing: 6){
+                        Text("분사량")
+                            .font(.custom("Pretendard-regular", size: 9))
+                        Text("100ml")
+                            .font(.custom("Pretendard-Bold", size: 11))
+                        Text("120ml")
+                            .font(.custom("Pretendard-Bold", size: 11))
+                        Text("80ml")
+                            .font(.custom("Pretendard-Bold", size: 11))
+                    }
+                    .padding(.trailing, 6)
+                    Spacer()
+                    VStack(alignment: .leading, spacing: 6){
+                        Text("분사 시간")
+                            .font(.custom("Pretendard-regular", size: 9))
+                        Text("30초")
+                            .font(.custom("Pretendard-Bold", size: 11))
+                        Text("40초")
+                            .font(.custom("Pretendard-Bold", size: 11))
+                        Text("20초")
+                            .font(.custom("Pretendard-Bold", size: 11))
+                    }
+                    .padding(.trailing, 22)
                 }
             }
         }

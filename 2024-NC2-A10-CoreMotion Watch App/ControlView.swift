@@ -18,8 +18,7 @@ struct ControlView: View {
                             .foregroundColor(.endRed)
                             .opacity(0.3)
                         Text("종료")
-                            .font(.system(size: 9))
-                            .fontWeight(.medium)
+                            .font(.custom("Pretendard-medium", size: 9))
                     }
                     Image(systemName: "xmark")
                         .resizable()
@@ -35,8 +34,7 @@ struct ControlView: View {
                             .foregroundColor(.primaryYellow)
                             .opacity(0.4)
                         Text("일시정지")
-                            .font(.system(size: 9))
-                            .fontWeight(.medium)
+                            .font(.custom("Pretendard-medium", size: 9))
                     }
                     Image(systemName: "pause")
                         .resizable()
@@ -59,8 +57,7 @@ struct ControlView: View {
                             .foregroundColor(.listGray)
                             .opacity(0.3)
                         Text("지난 기록")
-                            .font(.system(size: 9))
-                            .fontWeight(.medium)
+                            .font(.custom("Pretendard-medium", size: 9))
                     }
                     Image(systemName: "pencil.line")
                         .resizable()
@@ -76,8 +73,7 @@ struct ControlView: View {
                             .foregroundColor(.waterBlue)
                             .opacity(0.4)
                         Text("차수")
-                            .font(.system(size: 9))
-                            .fontWeight(.medium)
+                            .font(.custom("Pretendard-medium", size: 9))
                     }
                     Image(systemName: "1.circle")
                         .resizable()

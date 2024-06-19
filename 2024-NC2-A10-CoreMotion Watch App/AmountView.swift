@@ -17,14 +17,12 @@ struct AmountView: View {
         VStack{
             HStack{
                 Text("원두 양")
-                    .font(.system(size: 23))
-                    .fontWeight(.bold)
+                    .font(.custom("Pretendard-Bold", size: 23))
                     .padding(.leading, 15)
                     .foregroundColor(.primaryYellow)
                 
                 Spacer()
             }
-//            ZStack{
                 HStack{
                     ZStack{
                         Picker("", selection: $option) {
@@ -47,19 +45,13 @@ struct AmountView: View {
                     .frame(width: 127, height: 97)
                     .font(.system(size: 24))
                     Text("g")
-                        .font(.system(size: 32))
-                        .fontWeight(.semibold)
+                        .font(.custom("Pretendard-semiBold", size: 32))
                         .foregroundColor(.primaryYellow)
                         .padding(.leading, 5)
                         .padding(.top)
                 }
                 .padding(.bottom, 10)
 
-//            }
-//            .padding(.bottom, 5)
-
-
-                  
             
             ZStack{
                 RoundedRectangle(cornerRadius: 20)
@@ -67,7 +59,7 @@ struct AmountView: View {
                     .foregroundColor(.lightGreen)
                 Text("완료")
                     .foregroundColor(.black)
-                    .fontWeight(.semibold)
+                    .font(.custom("Pretendard-Bold", size: 16))
             }
             .padding(.top)
 
