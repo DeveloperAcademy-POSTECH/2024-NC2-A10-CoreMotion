@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1AD1C40D2C21A724008C42D2 /* DripMotionClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1AD1C40C2C21A724008C42D2 /* DripMotionClassifier.mlmodel */; };
 		1AD1C40E2C21A9EF008C42D2 /* DripMotionClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1AD1C40C2C21A724008C42D2 /* DripMotionClassifier.mlmodel */; };
+		1AD1C4142C22769F008C42D2 /* PredictManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD1C4122C22769F008C42D2 /* PredictManager.swift */; };
 		616C2F302C1DA5C100F63BBA /* _024_NC2_A10_CoreMotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C2F2F2C1DA5C100F63BBA /* _024_NC2_A10_CoreMotionApp.swift */; };
 		616C2F322C1DA5C100F63BBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C2F312C1DA5C100F63BBA /* ContentView.swift */; };
 		616C2F342C1DA5C200F63BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 616C2F332C1DA5C200F63BBA /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		1AD1C40C2C21A724008C42D2 /* DripMotionClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DripMotionClassifier.mlmodel; sourceTree = "<group>"; };
+		1AD1C4122C22769F008C42D2 /* PredictManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictManager.swift; sourceTree = "<group>"; };
 		616C2F2C2C1DA5C100F63BBA /* 2024-NC2-A10-CoreMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2024-NC2-A10-CoreMotion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		616C2F2F2C1DA5C100F63BBA /* _024_NC2_A10_CoreMotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _024_NC2_A10_CoreMotionApp.swift; sourceTree = "<group>"; };
 		616C2F312C1DA5C100F63BBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				616C2F452C1DA5C300F63BBA /* Assets.xcassets */,
 				616C2F472C1DA5C300F63BBA /* Preview Content */,
 				61C749142C1EF77800E2EEC9 /* WatchToiOSConnector.swift */,
+				1AD1C4122C22769F008C42D2 /* PredictManager.swift */,
 			);
 			path = "2024-NC2-A10-CoreMotion Watch App";
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			files = (
 				616C2F442C1DA5C200F63BBA /* ContentView.swift in Sources */,
 				61C749152C1EF77800E2EEC9 /* WatchToiOSConnector.swift in Sources */,
+				1AD1C4142C22769F008C42D2 /* PredictManager.swift in Sources */,
 				1AD1C40E2C21A9EF008C42D2 /* DripMotionClassifier.mlmodel in Sources */,
 				616C2F422C1DA5C200F63BBA /* _024_NC2_A10_CoreMotionApp.swift in Sources */,
 			);
