@@ -27,6 +27,7 @@
 		61AE49092C23324B009D13F4 /* Start2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE49082C23324B009D13F4 /* Start2View.swift */; };
 		61AE490B2C233252009D13F4 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE490A2C233252009D13F4 /* StartView.swift */; };
 		61AE490D2C233258009D13F4 /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE490C2C233258009D13F4 /* WaterView.swift */; };
+		61C323792C2342C70053C365 /* DripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C323782C2342C70053C365 /* DripView.swift */; };
 		61C749102C1EF65B00E2EEC9 /* WatchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C7490F2C1EF65B00E2EEC9 /* WatchConnector.swift */; };
 		61C749132C1EF6A100E2EEC9 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C749122C1EF6A100E2EEC9 /* WatchConnectivity.framework */; };
 		61C749152C1EF77800E2EEC9 /* WatchToiOSConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C749142C1EF77800E2EEC9 /* WatchToiOSConnector.swift */; };
@@ -78,6 +79,7 @@
 		61AE49082C23324B009D13F4 /* Start2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start2View.swift; sourceTree = "<group>"; };
 		61AE490A2C233252009D13F4 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		61AE490C2C233258009D13F4 /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
+		61C323782C2342C70053C365 /* DripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DripView.swift; sourceTree = "<group>"; };
 		61C7490F2C1EF65B00E2EEC9 /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
 		61C749122C1EF6A100E2EEC9 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		61C749142C1EF77800E2EEC9 /* WatchToiOSConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchToiOSConnector.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				61AE490A2C233252009D13F4 /* StartView.swift */,
 				61AE490C2C233258009D13F4 /* WaterView.swift */,
 				61AE49002C23321F009D13F4 /* DripEndView.swift */,
+				61C323782C2342C70053C365 /* DripView.swift */,
 			);
 			path = "2024-NC2-A10-CoreMotion Watch App";
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				616C2F442C1DA5C200F63BBA /* ContentView.swift in Sources */,
 				61AE490B2C233252009D13F4 /* StartView.swift in Sources */,
 				61C749152C1EF77800E2EEC9 /* WatchToiOSConnector.swift in Sources */,
+				61C323792C2342C70053C365 /* DripView.swift in Sources */,
 				1AD1C41D2C22F970008C42D2 /* DripMotionClassifier.mlmodel in Sources */,
 				1AD1C4142C22769F008C42D2 /* PredictManager.swift in Sources */,
 				1AD1C4192C22A124008C42D2 /* ViewModel.swift in Sources */,
