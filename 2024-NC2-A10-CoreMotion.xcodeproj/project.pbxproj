@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A5345E82C231C4100EBA5DA /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5345E72C231C4100EBA5DA /* AmountView.swift */; };
+		1A5345ED2C231C6700EBA5DA /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5345EC2C231C6700EBA5DA /* ControlView.swift */; };
+		1A5345EF2C231C7500EBA5DA /* DripEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5345EE2C231C7500EBA5DA /* DripEndView.swift */; };
+		1A5345F12C231C8200EBA5DA /* DripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5345F02C231C8200EBA5DA /* DripView.swift */; };
+		1A5345F32C231C9500EBA5DA /* EndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5345F22C231C9500EBA5DA /* EndView.swift */; };
+		1A5345F52C231C9E00EBA5DA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5345F42C231C9E00EBA5DA /* ListView.swift */; };
+		1A5345F72C231CAA00EBA5DA /* Start2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5345F62C231CAA00EBA5DA /* Start2View.swift */; };
+		1A5345F92C231CB300EBA5DA /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5345F82C231CB300EBA5DA /* StartView.swift */; };
+		1A5345FB2C231CC600EBA5DA /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5345FA2C231CC600EBA5DA /* WaterView.swift */; };
 		1AD1C40D2C21A724008C42D2 /* DripMotionClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1AD1C40C2C21A724008C42D2 /* DripMotionClassifier.mlmodel */; };
 		616C2F302C1DA5C100F63BBA /* _024_NC2_A10_CoreMotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C2F2F2C1DA5C100F63BBA /* _024_NC2_A10_CoreMotionApp.swift */; };
 		616C2F322C1DA5C100F63BBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616C2F312C1DA5C100F63BBA /* ContentView.swift */; };
@@ -20,6 +29,15 @@
 		61C749102C1EF65B00E2EEC9 /* WatchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C7490F2C1EF65B00E2EEC9 /* WatchConnector.swift */; };
 		61C749132C1EF6A100E2EEC9 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C749122C1EF6A100E2EEC9 /* WatchConnectivity.framework */; };
 		61C749152C1EF77800E2EEC9 /* WatchToiOSConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C749142C1EF77800E2EEC9 /* WatchToiOSConnector.swift */; };
+		DC62ADFF2C219D7F00D68AF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 616C2F332C1DA5C200F63BBA /* Assets.xcassets */; };
+		DC62AE032C21ACED00D68AF7 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AE022C21ACED00D68AF7 /* StartView.swift */; };
+		DC62AE052C21AD3900D68AF7 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AE042C21AD3900D68AF7 /* ControlView.swift */; };
+		DC62AE072C21ADCB00D68AF7 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AE062C21ADCB00D68AF7 /* AmountView.swift */; };
+		DC62AE092C21ADE400D68AF7 /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AE082C21ADE400D68AF7 /* WaterView.swift */; };
+		DC62AE0B2C21ADFA00D68AF7 /* DripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AE0A2C21ADFA00D68AF7 /* DripView.swift */; };
+		DC62AE0D2C21AE3D00D68AF7 /* EndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AE0C2C21AE3D00D68AF7 /* EndView.swift */; };
+		DC62AE0F2C21CD8F00D68AF7 /* DripEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AE0E2C21CD8F00D68AF7 /* DripEndView.swift */; };
+		DC62AE112C22076600D68AF7 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62AE102C22076600D68AF7 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +65,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A5345E72C231C4100EBA5DA /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		1A5345EC2C231C6700EBA5DA /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		1A5345EE2C231C7500EBA5DA /* DripEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DripEndView.swift; sourceTree = "<group>"; };
+		1A5345F02C231C8200EBA5DA /* DripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DripView.swift; sourceTree = "<group>"; };
+		1A5345F22C231C9500EBA5DA /* EndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndView.swift; sourceTree = "<group>"; };
+		1A5345F42C231C9E00EBA5DA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		1A5345F62C231CAA00EBA5DA /* Start2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start2View.swift; sourceTree = "<group>"; };
+		1A5345F82C231CB300EBA5DA /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		1A5345FA2C231CC600EBA5DA /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
 		1AD1C40C2C21A724008C42D2 /* DripMotionClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DripMotionClassifier.mlmodel; sourceTree = "<group>"; };
 		616C2F2C2C1DA5C100F63BBA /* 2024-NC2-A10-CoreMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2024-NC2-A10-CoreMotion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		616C2F2F2C1DA5C100F63BBA /* _024_NC2_A10_CoreMotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _024_NC2_A10_CoreMotionApp.swift; sourceTree = "<group>"; };
@@ -61,6 +88,14 @@
 		61C7490F2C1EF65B00E2EEC9 /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
 		61C749122C1EF6A100E2EEC9 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		61C749142C1EF77800E2EEC9 /* WatchToiOSConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchToiOSConnector.swift; sourceTree = "<group>"; };
+		DC62AE022C21ACED00D68AF7 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		DC62AE042C21AD3900D68AF7 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		DC62AE062C21ADCB00D68AF7 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		DC62AE082C21ADE400D68AF7 /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
+		DC62AE0A2C21ADFA00D68AF7 /* DripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DripView.swift; sourceTree = "<group>"; };
+		DC62AE0C2C21AE3D00D68AF7 /* EndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndView.swift; sourceTree = "<group>"; };
+		DC62AE0E2C21CD8F00D68AF7 /* DripEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DripEndView.swift; sourceTree = "<group>"; };
+		DC62AE102C22076600D68AF7 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +173,15 @@
 				616C2F452C1DA5C300F63BBA /* Assets.xcassets */,
 				616C2F472C1DA5C300F63BBA /* Preview Content */,
 				61C749142C1EF77800E2EEC9 /* WatchToiOSConnector.swift */,
+				1A5345FA2C231CC600EBA5DA /* WaterView.swift */,
+				1A5345E72C231C4100EBA5DA /* AmountView.swift */,
+				1A5345EC2C231C6700EBA5DA /* ControlView.swift */,
+				1A5345EE2C231C7500EBA5DA /* DripEndView.swift */,
+				1A5345F02C231C8200EBA5DA /* DripView.swift */,
+				1A5345F22C231C9500EBA5DA /* EndView.swift */,
+				1A5345F42C231C9E00EBA5DA /* ListView.swift */,
+				1A5345F62C231CAA00EBA5DA /* Start2View.swift */,
+				1A5345F82C231CB300EBA5DA /* StartView.swift */,
 			);
 			path = "2024-NC2-A10-CoreMotion Watch App";
 			sourceTree = "<group>";
@@ -249,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				616C2F492C1DA5C300F63BBA /* Preview Assets.xcassets in Resources */,
+				DC62ADFF2C219D7F00D68AF7 /* Assets.xcassets in Resources */,
 				616C2F462C1DA5C300F63BBA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,8 +317,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				616C2F442C1DA5C200F63BBA /* ContentView.swift in Sources */,
+				1A5345EF2C231C7500EBA5DA /* DripEndView.swift in Sources */,
+				1A5345F32C231C9500EBA5DA /* EndView.swift in Sources */,
+				1A5345F12C231C8200EBA5DA /* DripView.swift in Sources */,
+				1A5345FB2C231CC600EBA5DA /* WaterView.swift in Sources */,
+				1A5345F72C231CAA00EBA5DA /* Start2View.swift in Sources */,
 				61C749152C1EF77800E2EEC9 /* WatchToiOSConnector.swift in Sources */,
+				1A5345E82C231C4100EBA5DA /* AmountView.swift in Sources */,
 				616C2F422C1DA5C200F63BBA /* _024_NC2_A10_CoreMotionApp.swift in Sources */,
+				1A5345F92C231CB300EBA5DA /* StartView.swift in Sources */,
+				1A5345ED2C231C6700EBA5DA /* ControlView.swift in Sources */,
+				1A5345F52C231C9E00EBA5DA /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,22 +461,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"2024-NC2-A10-CoreMotion Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 2J2UA8CPHM;
+				DEVELOPMENT_TEAM = 33WFSQ847V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "2024-NC2-A10-CoreMotion";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.nc2.coremotion.-024-NC2-A10-CoreMotion";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.nc2.coremotion.-024-NC2-A10-CoreMotion-Design";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nc2.coremotion.-024-NC2-A10-CoreMotion.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nc2.coremotion.-024-NC2-A10-CoreMotion-Design.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -437,22 +493,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"2024-NC2-A10-CoreMotion Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 2J2UA8CPHM;
+				DEVELOPMENT_TEAM = 33WFSQ847V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "2024-NC2-A10-CoreMotion";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.nc2.coremotion.-024-NC2-A10-CoreMotion";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.nc2.coremotion.-024-NC2-A10-CoreMotion-Design";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nc2.coremotion.-024-NC2-A10-CoreMotion.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nc2.coremotion.-024-NC2-A10-CoreMotion-Design.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -472,7 +530,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"2024-NC2-A10-CoreMotion/Preview Content\"";
-				DEVELOPMENT_TEAM = 2J2UA8CPHM;
+				DEVELOPMENT_TEAM = 33WFSQ847V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "2024-NC2-A10-CoreMotion";
@@ -487,7 +545,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nc2.coremotion.-024-NC2-A10-CoreMotion";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nc2.coremotion.-024-NC2-A10-CoreMotion-Design";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -505,7 +563,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"2024-NC2-A10-CoreMotion/Preview Content\"";
-				DEVELOPMENT_TEAM = 2J2UA8CPHM;
+				DEVELOPMENT_TEAM = 33WFSQ847V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "2024-NC2-A10-CoreMotion";
@@ -520,7 +578,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nc2.coremotion.-024-NC2-A10-CoreMotion";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nc2.coremotion.-024-NC2-A10-CoreMotion-Design";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
