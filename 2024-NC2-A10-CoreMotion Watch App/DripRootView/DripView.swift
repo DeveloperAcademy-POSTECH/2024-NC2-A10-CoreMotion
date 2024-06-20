@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DripView: View {
+    @ObservedObject var viewModel: ViewModel
     @State private var isAnimating = false
     let circleRadius: CGFloat = 50 // 큰 원의 반지름
     let smallCircleRadius: CGFloat = 4 // 작은 원의 반지름
@@ -78,14 +79,15 @@ struct DripView: View {
 //                          })
                 }
             }
+            .tint(.clear)
             
 
-            Text("1차 드립")
+            Text("\(viewModel.dripSessionModel.waterQuantities.count+1)차 드립")
                 .font(.custom("Pretendard-bold", size: 23))
         }
     }
 }
     
 #Preview {
-    DripView()
+    DripView(viewModel: ViewModel())
 }

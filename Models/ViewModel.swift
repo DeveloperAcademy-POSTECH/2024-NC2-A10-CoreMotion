@@ -8,11 +8,32 @@
 import Foundation
 import CoreMotion
 
-private var timer: Timer?
+
+enum DripSessionStatus{
+    case preparing
+    case ongoing
+    case pause
+    case complete
+    var getDaga: String{
+        switch self{
+        case .preparing :
+            return "준비중"
+        case .ongoing :
+            return "진행중"
+        case .pause :
+            return "일시정지"
+        case .complete:
+            return "완료"
+        }
+    }
+}
 
 struct DripSessionModel {
+    var Dripper: String = ""
+    var beanAmount: Int = 1
     var pourTimeSums: [Double] = []
-    var waterQuantities: [Double] = []
+    var waterQuantities: [Int] = []
+    var elapsedTimes: [Double] = []
 }
 
 class ViewModel: ObservableObject {
@@ -33,10 +54,12 @@ class ViewModel: ObservableObject {
     @Published var rotZs = [0.0]
     @Published var prediction = ""
     @Published var pourTimeSum: Double = 0.0
+    @Published var elapsedTime: Double = 0.0
     @Published var dripSessionModel = DripSessionModel()
-    @Published var predictManager = PredictManager()
-    @Published var motionManager = CMMotionManager()
-    
+    @Published var status: DripSessionStatus = .preparing
+    private var predictManager = PredictManager()
+    private var motionManager = CMMotionManager()
+    private var timer: Timer?
     
     func updateMotionData(){
         self.motionData.append([self.accX, self.accY, self.accZ, self.rotX, self.rotY, self.rotZ])
@@ -51,7 +74,7 @@ class ViewModel: ObservableObject {
     
     func startDripSession() {
         guard timer == nil else { return } // Prevent multiple timers
-
+        
         let strongSelf = self // Capture `self` strongly once
         timer = Timer.scheduledTimer(withTimeInterval: 1/2, repeats: true) { [weak self] _ in
             guard let self = self else { return }
@@ -62,33 +85,53 @@ class ViewModel: ObservableObject {
                 if self.prediction == "크게" || self.prediction == "작게" {
                     self.pourTimeSum += 1/2
                 }
+                self.elapsedTime += 1/2
             }
         }
     }
     
-    func recordPourTime(){
-        
+    
+    
+    func recordPourTime(waterQuantity: Int){
+        self.dripSessionModel.waterQuantities.append(waterQuantity)
+        self.dripSessionModel.pourTimeSums.append(self.pourTimeSum)
+        self.dripSessionModel.elapsedTimes.append(self.elapsedTime)
+        self.pourTimeSum = 0.0
+        self.elapsedTime = 0.0
+    }
+    
+    func pauseDripSession() {
+        self.status = .pause
+        self.stopRecordingDeviceMotion()
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    func resumeDripSession(){
+        self.status = .ongoing
+        self.startRecordingDeviceMotion()
+        self.startDripSession()
     }
     
     func endDripSession(){
-        timer?.invalidate()
-        timer = nil
-        
+        self.timer?.invalidate()
+        self.timer = nil
+        self.status = .complete
+        self.stopRecordingDeviceMotion()
     }
-    
     
     
     func startRecordingDeviceMotion() {
         // Device motion을 수집 가능한지 확인
-        guard motionManager.isDeviceMotionAvailable else {
+        guard self.motionManager.isDeviceMotionAvailable else {
             print("Device motion data is not available")
             return
         }
         
         // 모션 갱신 주기 설정 (100Hz)
-        motionManager.deviceMotionUpdateInterval = 0.01
+        self.motionManager.deviceMotionUpdateInterval = 0.01
         // Device motion 업데이트 받기 시작
-        motionManager.startDeviceMotionUpdates(to: .main) { (deviceMotion: CMDeviceMotion?, error: Error?) in
+        self.motionManager.startDeviceMotionUpdates(to: .main) { (deviceMotion: CMDeviceMotion?, error: Error?) in
             guard let data = deviceMotion, error == nil else {
                 print("Failed to get device motion data: \(error?.localizedDescription ?? "Unknown error")")
                 return
@@ -110,13 +153,8 @@ class ViewModel: ObservableObject {
         }
     }
     
-    
-    func stopRecordingDeviceMotion() {
-        //        watchToiOSConnector.sendDataToiOS(motionData: viewModel.motionData)
-        print("send!")
-
-        motionManager.stopDeviceMotionUpdates()
-        motionData = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
+    func resetMotionData(){
+        self.motionData = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
         self.accX =  0.0
         self.accY = 0.0
         self.accZ = 0.0
@@ -129,6 +167,14 @@ class ViewModel: ObservableObject {
         self.rotXs = [0.0]
         self.rotYs = [0.0]
         self.rotZs = [0.0]
+    }
+    
+    
+    func stopRecordingDeviceMotion() {
+        //        watchToiOSConnector.sendDataToiOS(motionData: viewModel.motionData)
+        print("send!")
+        motionManager.stopDeviceMotionUpdates()
+        self.resetMotionData()
     }
 }
 

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DripEndView: View {
+    @ObservedObject var viewModel: ViewModel
     var body: some View {
         
         VStack{
@@ -24,7 +25,7 @@ struct DripEndView: View {
                     .foregroundColor(.orangeYellow)
             }
             
-            Text("1차 드립 완료")
+            Text("\(viewModel.dripSessionModel.waterQuantities.count)차 드립 완료")
                 .font(.custom("Pretendard-bold", size: 23))
                 .foregroundColor(.primaryYellow)
         }
@@ -34,5 +35,5 @@ struct DripEndView: View {
 
 
 #Preview {
-    DripEndView()
+    DripEndView(viewModel: ViewModel())
 }
