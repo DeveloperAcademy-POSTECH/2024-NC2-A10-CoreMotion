@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A5346102C23C09100EBA5DA /* DripRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A53460F2C23C09100EBA5DA /* DripRootView.swift */; };
+		1A5346142C23C99800EBA5DA /* PreparingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5346132C23C99800EBA5DA /* PreparingView.swift */; };
 		1AD1C4142C22769F008C42D2 /* PredictManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD1C4122C22769F008C42D2 /* PredictManager.swift */; };
 		1AD1C4192C22A124008C42D2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD1C4182C22A124008C42D2 /* ViewModel.swift */; };
 		1AD1C41D2C22F970008C42D2 /* DripMotionClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1AD1C41C2C22F970008C42D2 /* DripMotionClassifier.mlmodel */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		1A53460F2C23C09100EBA5DA /* DripRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DripRootView.swift; sourceTree = "<group>"; };
+		1A5346132C23C99800EBA5DA /* PreparingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparingView.swift; sourceTree = "<group>"; };
 		1AD1C4122C22769F008C42D2 /* PredictManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictManager.swift; sourceTree = "<group>"; };
 		1AD1C4182C22A124008C42D2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		1AD1C41C2C22F970008C42D2 /* DripMotionClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DripMotionClassifier.mlmodel; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				616C2F472C1DA5C300F63BBA /* Preview Content */,
 				61C749142C1EF77800E2EEC9 /* WatchToiOSConnector.swift */,
 				1AD1C4122C22769F008C42D2 /* PredictManager.swift */,
+				1A5346132C23C99800EBA5DA /* PreparingView.swift */,
 				61AE490A2C233252009D13F4 /* StartView.swift */,
 				61AE49082C23324B009D13F4 /* Start2View.swift */,
 				61AE48FC2C23320B009D13F4 /* AmountView.swift */,
@@ -318,6 +321,7 @@
 				1AD1C41D2C22F970008C42D2 /* DripMotionClassifier.mlmodel in Sources */,
 				1AD1C4142C22769F008C42D2 /* PredictManager.swift in Sources */,
 				1A5346102C23C09100EBA5DA /* DripRootView.swift in Sources */,
+				1A5346142C23C99800EBA5DA /* PreparingView.swift in Sources */,
 				1AD1C4192C22A124008C42D2 /* ViewModel.swift in Sources */,
 				61AE49072C233243009D13F4 /* ListView.swift in Sources */,
 				61AE49012C23321F009D13F4 /* DripEndView.swift in Sources */,

@@ -9,8 +9,9 @@ import SwiftUI
 
 struct StartView: View {
     @ObservedObject var viewModel: ViewModel
+    @Binding var status: PreparingStatus
+    
     var body: some View {
-        
         VStack{
             VStack{
                 HStack{
@@ -23,7 +24,7 @@ struct StartView: View {
                 Spacer()
             }
             .padding(.bottom, 13)
-
+            
             HStack{
                 Text("드리퍼 선택")
                     .font(.custom("Pretendard-semibold", size: 15))
@@ -31,40 +32,46 @@ struct StartView: View {
                 Spacer()
             }
             .padding(.bottom, 4)
-
+            
             HStack{
-//                Button(action: {}, label: {
-//                    /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-//                })
-                ZStack{
-                    RoundedRectangle(cornerRadius: 10)
-                        .frame(width: 88, height: 88)
-                        .foregroundStyle(.waterBlue)
-                    VStack(alignment: .leading, spacing: -3){
-                        
-                        Text("Hario")
-                            .font(.custom("Pretendard-semibold", size: 28))
-                            .foregroundStyle(.black)
-                        Text("하리오")
-                            .font(.custom("Pretendard-regular", size: 13))
-                            .foregroundStyle(.black)
+                Button(action: {
+                    status = .amount
+                }, label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width: 88, height: 88)
+                            .foregroundStyle(.waterBlue)
+                        VStack(alignment: .leading, spacing: -3){
+                            Text("Hario")
+                                .font(.custom("Pretendard-semibold", size: 28))
+                                .foregroundStyle(.black)
+                            Text("하리오")
+                                .font(.custom("Pretendard-regular", size: 13))
+                                .foregroundStyle(.black)
+                        }
                     }
-                }
+                })
                 Spacer()
                     .frame(width: 6)
-                ZStack{
-                    RoundedRectangle(cornerRadius: 10)
-                        .frame(width: 88, height: 88)
-                        .foregroundStyle(.lightGreen)
-                    VStack(alignment: .leading, spacing: -3){
-                        Text("Kalita")
-                            .font(.custom("Pretendard-semibold", size: 28))
-                            .foregroundStyle(.black)
-                        Text("칼리타")
-                            .font(.custom("Pretendard-regular", size: 13))
-                            .foregroundStyle(.black)
+                Button(action: {
+                    status = .amount
+                }, label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width: 88, height: 88)
+                            .foregroundStyle(.lightGreen)
+                        VStack(alignment: .leading, spacing: -3){
+                            
+                            Text("Kalita")
+                                .font(.custom("Pretendard-semibold", size: 28))
+                                .foregroundStyle(.black)
+                            Text("칼리타")
+                                .font(.custom("Pretendard-regular", size: 13))
+                                .foregroundStyle(.black)
+                            
+                        }
                     }
-                }
+                })
             }
             .padding(.bottom, 70)
         }
@@ -72,5 +79,7 @@ struct StartView: View {
 }
 
 #Preview {
-    StartView(viewModel: ViewModel())
+    StartView(viewModel: ViewModel(), status: .constant(
+        PreparingStatus.start
+    ))
 }

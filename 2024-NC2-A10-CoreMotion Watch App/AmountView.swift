@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct AmountView: View {
-    
+    @ObservedObject var viewModel: ViewModel
+    @Binding var status: PreparingStatus
     @State private var option = 12
     @State private var selectionOption = Array(0...50)
     
@@ -68,5 +69,7 @@ struct AmountView: View {
 }
 
 #Preview {
-    AmountView()
+    AmountView(viewModel: ViewModel(), status: .constant(
+        PreparingStatus.amount
+    ))
 }

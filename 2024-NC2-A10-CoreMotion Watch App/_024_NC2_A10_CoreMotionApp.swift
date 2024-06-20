@@ -14,7 +14,7 @@ struct _024_NC2_A10_CoreMotion_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
             if viewModel.status == .preparing {
-                StartView(viewModel: viewModel)
+                PreparingView(viewModel: viewModel)
             }
             else if viewModel.status == .ongoing {
                 DripRootView(viewModel: viewModel)
@@ -25,3 +25,4 @@ struct _024_NC2_A10_CoreMotion_Watch_AppApp: App {
         }
     }
 }
+
