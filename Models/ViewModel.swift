@@ -28,7 +28,7 @@ enum DripSessionStatus{
 
 struct DripSessionModel {
     var Dripper: String = ""
-    var beanAmount: Int = 0
+    var beanAmount: Int = 1
     var pourTimeSums: [Double] = []
     var waterQuantities: [Int] = []
 }

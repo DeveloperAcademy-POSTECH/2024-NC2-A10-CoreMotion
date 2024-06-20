@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct EndView: View {
+    @ObservedObject var viewModel: ViewModel
+    
     var body: some View {
         VStack{
             HStack{
@@ -15,7 +17,7 @@ struct EndView: View {
                     .font(.custom("Pretendard-medium", size: 11))
                     .padding(.leading, 20)
                 Spacer()
-                Text("하리오")
+                Text("\(viewModel.dripSessionModel.Dripper)")
                     .font(.custom("Pretendard-Bold", size: 11))
                     .fontWeight(.medium)
                     .padding(.trailing, 20)
@@ -31,7 +33,7 @@ struct EndView: View {
                             .font(.custom("Pretendard-medium", size: 9))
                             .padding(.trailing, 43)
                             .padding(.bottom, 45)
-                    Text("10g")
+                    Text("\(viewModel.dripSessionModel.beanAmount)g")
                             .font(.custom("Pretendard-semibold", size: 25))
                             .foregroundStyle(.primaryYellow)
                             .padding(.top, 3)
@@ -45,7 +47,7 @@ struct EndView: View {
                         .font(.custom("Pretendard-medium", size: 9))
                         .padding(.trailing, 52)
                         .padding(.bottom, 45)
-                    Text("1:1.5")
+                    Text("1:\(viewModel.dripSessionModel.waterQuantities.reduce(0, +)/viewModel.dripSessionModel.beanAmount)")
                         .font(.custom("Pretendard-semibold", size: 25))
                         .foregroundStyle(.lightGreen)
                         .padding(.top, 3)
@@ -63,39 +65,36 @@ struct EndView: View {
                         Text("차수")
                             .font(.custom("Pretendard-regular", size: 9))
                             .foregroundStyle(.waterBlue)
-                        Text("1차")
-                            .font(.custom("Pretendard-Bold", size: 11))
-                            .foregroundStyle(.waterBlue)
-                        Text("2차")
-                            .font(.custom("Pretendard-Bold", size: 11))
-                            .foregroundStyle(.waterBlue)
-                        Text("3차")
-                            .font(.custom("Pretendard-Bold", size: 11))
-                            .foregroundStyle(.waterBlue)
+                        List{
+                            ForEach(Array(viewModel.dripSessionModel.waterQuantities.enumerated()), id: \.1) {(i, _) in
+                                Text("\(i+1)차")
+                                    .font(.custom("Pretendard-Bold", size: 11))
+                                    .foregroundStyle(.waterBlue)
+                            }}
                     }
                     .padding(.leading, 20)
                     Spacer()
                     VStack(alignment: .leading, spacing: 6){
                         Text("분사량")
                             .font(.custom("Pretendard-regular", size: 9))
-                        Text("100ml")
-                            .font(.custom("Pretendard-Bold", size: 11))
-                        Text("120ml")
-                            .font(.custom("Pretendard-Bold", size: 11))
-                        Text("80ml")
-                            .font(.custom("Pretendard-Bold", size: 11))
+                        List{
+                            ForEach(Array(viewModel.dripSessionModel.waterQuantities.enumerated()), id: \.1) {(_, quantity) in
+                                Text("\(quantity)ml")
+                                    .font(.custom("Pretendard-Bold", size: 11))
+                                    .foregroundStyle(.waterBlue)
+                            }}
                     }
                     .padding(.trailing, 6)
                     Spacer()
                     VStack(alignment: .leading, spacing: 6){
                         Text("분사 시간")
                             .font(.custom("Pretendard-regular", size: 9))
-                        Text("30초")
-                            .font(.custom("Pretendard-Bold", size: 11))
-                        Text("40초")
-                            .font(.custom("Pretendard-Bold", size: 11))
-                        Text("20초")
-                            .font(.custom("Pretendard-Bold", size: 11))
+                        List{
+                            ForEach(Array(viewModel.dripSessionModel.pourTimeSums.enumerated()), id: \.1) {(i, pourTimeSum) in
+                                Text("\(pourTimeSum)초")
+                                    .font(.custom("Pretendard-Bold", size: 11))
+                                    .foregroundStyle(.waterBlue)
+                            }}
                     }
                     .padding(.trailing, 22)
                 }
@@ -105,5 +104,5 @@ struct EndView: View {
 }
 
 #Preview {
-    EndView()
+    EndView(viewModel: ViewModel())
 }
