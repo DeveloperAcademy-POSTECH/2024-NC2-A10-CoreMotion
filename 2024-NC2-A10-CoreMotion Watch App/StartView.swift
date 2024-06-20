@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StartView: View {
-    
+    @ObservedObject var viewModel: ViewModel
     var body: some View {
         
         VStack{
@@ -41,6 +41,7 @@ struct StartView: View {
                         .frame(width: 88, height: 88)
                         .foregroundStyle(.waterBlue)
                     VStack(alignment: .leading, spacing: -3){
+                        
                         Text("Hario")
                             .font(.custom("Pretendard-semibold", size: 28))
                             .foregroundStyle(.black)
@@ -71,5 +72,5 @@ struct StartView: View {
 }
 
 #Preview {
-    StartView()
+    StartView(viewModel: ViewModel())
 }

@@ -10,7 +10,24 @@ import CoreMotion
 
 private var timer: Timer?
 
+enum DripSessionStatus{
+    case preparing
+    case ongoing
+    case complete
+    var getDaga: String{
+        switch self{
+        case .preparing :
+            return "준비중"
+        case .ongoing :
+            return "진행중"
+        case .complete:
+            return "완료"
+        }
+    }
+}
+
 struct DripSessionModel {
+    var Dripper: String = ""
     var pourTimeSums: [Double] = []
     var waterQuantities: [Double] = []
 }
@@ -36,6 +53,7 @@ class ViewModel: ObservableObject {
     @Published var dripSessionModel = DripSessionModel()
     @Published var predictManager = PredictManager()
     @Published var motionManager = CMMotionManager()
+    @Published var status: DripSessionStatus = .preparing
     
     
     func updateMotionData(){
@@ -51,7 +69,7 @@ class ViewModel: ObservableObject {
     
     func startDripSession() {
         guard timer == nil else { return } // Prevent multiple timers
-
+        
         let strongSelf = self // Capture `self` strongly once
         timer = Timer.scheduledTimer(withTimeInterval: 1/2, repeats: true) { [weak self] _ in
             guard let self = self else { return }
@@ -114,7 +132,7 @@ class ViewModel: ObservableObject {
     func stopRecordingDeviceMotion() {
         //        watchToiOSConnector.sendDataToiOS(motionData: viewModel.motionData)
         print("send!")
-
+        
         motionManager.stopDeviceMotionUpdates()
         motionData = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
         self.accX =  0.0

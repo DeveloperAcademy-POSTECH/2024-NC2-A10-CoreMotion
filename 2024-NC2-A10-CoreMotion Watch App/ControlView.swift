@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ControlView: View {
+    @ObservedObject var viewModel: ViewModel
     var body: some View {
         VStack{
             HStack{
@@ -88,5 +89,5 @@ struct ControlView: View {
 }
 
 #Preview {
-    ControlView()
+    ControlView(viewModel: ViewModel())
 }

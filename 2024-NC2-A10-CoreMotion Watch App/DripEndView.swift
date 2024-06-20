@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DripEndView: View {
+    @ObservedObject var viewModel: ViewModel
     var body: some View {
         
         VStack{
@@ -34,5 +35,5 @@ struct DripEndView: View {
 
 
 #Preview {
-    DripEndView()
+    DripEndView(viewModel: ViewModel())
 }

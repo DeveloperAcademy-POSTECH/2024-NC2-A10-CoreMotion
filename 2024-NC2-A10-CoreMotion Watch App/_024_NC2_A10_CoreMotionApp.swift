@@ -9,11 +9,19 @@ import SwiftUI
 
 @main
 struct _024_NC2_A10_CoreMotion_Watch_AppApp: App {
-    @ObservedObject private var viewModel = ViewModel()
+    @StateObject private var viewModel = ViewModel()
     
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: viewModel)
+            if viewModel.status == .preparing {
+                StartView(viewModel: viewModel)
+            }
+            else if viewModel.status == .ongoing {
+                DripRootView(viewModel: viewModel)
+            }
+            else if viewModel.status == .complete {
+                DripEndView(viewModel: viewModel)
+            }
         }
     }
 }

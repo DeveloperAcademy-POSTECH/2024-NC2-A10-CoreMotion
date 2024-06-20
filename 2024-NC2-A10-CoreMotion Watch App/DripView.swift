@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DripView: View {
+    @ObservedObject var viewModel: ViewModel
     @State private var isAnimating = false
     let circleRadius: CGFloat = 50 // 큰 원의 반지름
     let smallCircleRadius: CGFloat = 4 // 작은 원의 반지름
@@ -87,5 +88,5 @@ struct DripView: View {
 }
     
 #Preview {
-    DripView()
+    DripView(viewModel: ViewModel())
 }
