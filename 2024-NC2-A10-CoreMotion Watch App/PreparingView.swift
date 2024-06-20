@@ -19,15 +19,8 @@ struct PreparingView: View {
     @State var status: PreparingStatus = .start
     
     var body: some View {
-        VStack {
-            switch status {
-            case .start:
-                StartView(viewModel: viewModel, status: $status)
-            case .amount:
-                AmountView(viewModel: viewModel, status: $status)
-            case .ready:
-                AmountView(viewModel: viewModel, status: $status)
-            }
+        NavigationStack{
+            StartView(viewModel: viewModel, status: $status)
         }
     }
 }

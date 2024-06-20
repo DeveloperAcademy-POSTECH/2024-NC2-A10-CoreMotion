@@ -10,6 +10,7 @@ import SwiftUI
 struct StartView: View {
     @ObservedObject var viewModel: ViewModel
     @Binding var status: PreparingStatus
+    @State private var isActive = false
     
     var body: some View {
         VStack{
@@ -31,52 +32,37 @@ struct StartView: View {
                     .padding(.leading, 15)
                 Spacer()
             }
-            .padding(.bottom, 4)
+            .padding(.bottom, 15)
             
             HStack{
-                Button(action: {
-                    status = .amount
-                }, label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 10)
-                            .frame(width: 88, height: 88)
-                            .foregroundStyle(.waterBlue)
-                        VStack(alignment: .leading, spacing: -3){
-                            Text("Hario")
-                                .font(.custom("Pretendard-semibold", size: 28))
-                                .foregroundStyle(.black)
-                            Text("하리오")
-                                .font(.custom("Pretendard-regular", size: 13))
-                                .foregroundStyle(.black)
-                        }
-                    }
-                })
+//                NavigationLink(value: status.)
+                NavigationLink {
+                    AmountView(viewModel: viewModel, status: $status)
+                        .onAppear(perform: {
+                            viewModel.dripSessionModel.Dripper = "Hario"
+                            print(viewModel.dripSessionModel.Dripper)
+                        })
+                } label: {
+                    HarioItemView()
+                }
+
                 Spacer()
                     .frame(width: 6)
-                Button(action: {
-                    status = .amount
-                }, label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 10)
-                            .frame(width: 88, height: 88)
-                            .foregroundStyle(.lightGreen)
-                        VStack(alignment: .leading, spacing: -3){
-                            
-                            Text("Kalita")
-                                .font(.custom("Pretendard-semibold", size: 28))
-                                .foregroundStyle(.black)
-                            Text("칼리타")
-                                .font(.custom("Pretendard-regular", size: 13))
-                                .foregroundStyle(.black)
-                            
-                        }
-                    }
-                })
+                NavigationLink {
+                    AmountView(viewModel: viewModel, status: $status)
+                        .onAppear(perform: {
+                            viewModel.dripSessionModel.Dripper = "Kalita"
+                            print(viewModel.dripSessionModel.Dripper)
+                        })
+                } label: {
+                    KalitaItemView()
+                }
             }
             .padding(.bottom, 70)
         }
     }
 }
+
 
 #Preview {
     StartView(viewModel: ViewModel(), status: .constant(
