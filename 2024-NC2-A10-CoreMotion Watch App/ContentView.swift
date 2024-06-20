@@ -7,7 +7,6 @@ struct ContentView: View {
 
     
     @ObservedObject var viewModel: ViewModel
-    private let motionManager = CMMotionManager()
     @StateObject var watchToiOSConnector = WatchToiOSConnector()
     @State var isSessionEnd = false
     

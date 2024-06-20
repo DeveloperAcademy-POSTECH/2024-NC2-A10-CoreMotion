@@ -16,7 +16,7 @@ struct _024_NC2_A10_CoreMotion_Watch_AppApp: App {
             if viewModel.status == .preparing {
                 PreparingView(viewModel: viewModel)
             }
-            else if viewModel.status == .ongoing {
+            else if viewModel.status == .ongoing || viewModel.status == .pause{
                 DripRootView(viewModel: viewModel)
             }
             else if viewModel.status == .complete {

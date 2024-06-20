@@ -60,13 +60,12 @@ struct EndView: View {
                     .frame(width: 178, height: 91)
                     .foregroundStyle(.waterBlue)
                     .opacity(0.3)
-                HStack{
-                    VStack(alignment: .leading, spacing: 6){
+                HStack{                    VStack(alignment: .leading, spacing: 6){
                         Text("차수")
                             .font(.custom("Pretendard-regular", size: 9))
                             .foregroundStyle(.waterBlue)
 
-                            ForEach(Array(viewModel.dripSessionModel.waterQuantities.enumerated()), id: \.1) {(i, _) in
+                    ForEach(0..<viewModel.dripSessionModel.waterQuantities.count, id: \.self) {i in
                                 Text("\(i+1)차")
                                     .font(.custom("Pretendard-Bold", size: 11))
                                     .foregroundStyle(.waterBlue)
@@ -77,9 +76,8 @@ struct EndView: View {
                     VStack(alignment: .leading, spacing: 6){
                         Text("분사량")
                             .font(.custom("Pretendard-regular", size: 9))
-
-                            ForEach(Array(viewModel.dripSessionModel.waterQuantities.enumerated()), id: \.1) {(_, quantity) in
-                                Text("\(quantity)ml")
+                        ForEach(0..<viewModel.dripSessionModel.waterQuantities.count, id: \.self) {i in
+                                Text("\(viewModel.dripSessionModel.waterQuantities[i])ml")
                                     .font(.custom("Pretendard-Bold", size: 11))
                                     .foregroundStyle(.waterBlue)
                             }
@@ -90,13 +88,24 @@ struct EndView: View {
                         Text("분사 시간")
                             .font(.custom("Pretendard-regular", size: 9))
 
-                            ForEach(Array(viewModel.dripSessionModel.pourTimeSums.enumerated()), id: \.1) {(i, pourTimeSum) in
-                                Text("\(pourTimeSum)초")
+                        ForEach(0..<viewModel.dripSessionModel.pourTimeSums.count, id: \.self) {i in
+                            Text("\( String(format: "%.1f", viewModel.dripSessionModel.pourTimeSums[i]))초")
                                     .font(.custom("Pretendard-Bold", size: 11))
                                     .foregroundStyle(.waterBlue)
                             }
                     }
-                    .padding(.trailing, 22)
+                    .padding(.trailing, 6)
+                    
+                    VStack(alignment: .leading, spacing: 6){
+                        Text("경과 시간")
+                            .font(.custom("Pretendard-regular", size: 9))
+
+                        ForEach(0..<viewModel.dripSessionModel.elapsedTimes.count, id: \.self) {i in
+                            Text("\( String(format: "%.1f", viewModel.dripSessionModel.elapsedTimes[i]))초")
+                                    .font(.custom("Pretendard-Bold", size: 11))
+                                    .foregroundStyle(.waterBlue)
+                            }
+                    }  .padding(.trailing, 22)
                 }
             }
         }

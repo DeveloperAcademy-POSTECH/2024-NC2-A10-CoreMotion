@@ -14,7 +14,7 @@ struct ControlView: View {
             HStack{
                 Button(
                     action : {
-                        viewModel.status = .complete
+                        viewModel.endDripSession()
                         print("end dripSession")
                     }, label : {
                         ZStack{
@@ -40,7 +40,12 @@ struct ControlView: View {
                 
                 Button(
                     action: {
-                        print("pause tappd")
+                        if (viewModel.status == .ongoing) {
+                            viewModel.pauseDripSession()
+                        }
+                        else {
+                            viewModel.resumeDripSession()
+                        }
                     }, label : {
                         ZStack{
                             VStack{
@@ -48,11 +53,11 @@ struct ControlView: View {
                                     .frame(width: 82, height: 44)
                                     .foregroundColor(.primaryYellow)
                                     .opacity(0.4)
-                                Text("일시정지")
+                                Text(viewModel.status == .ongoing ? "일시정지" : "재개")
                                     .foregroundColor(.white)
                                     .font(.custom("Pretendard-medium", size: 9))
                             }
-                            Image(systemName: "pause")
+                            Image(systemName: viewModel.status == .ongoing ? "pause" : "play.fill")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 10)

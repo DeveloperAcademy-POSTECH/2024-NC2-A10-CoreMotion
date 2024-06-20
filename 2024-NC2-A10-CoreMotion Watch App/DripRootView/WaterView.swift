@@ -55,7 +55,7 @@ struct WaterView: View {
             
             Button(
                 action: {
-                    viewModel.dripSessionModel.waterQuantities.append(option)
+                    viewModel.recordPourTime(waterQuantity: option)
                     //다시 뷰로 돌아가기
                     selection = "default"
                     

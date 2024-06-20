@@ -57,6 +57,8 @@ struct AmountView: View {
                 action:{
                     viewModel.status = .ongoing
                     viewModel.dripSessionModel.beanAmount = option
+                    viewModel.startRecordingDeviceMotion()
+                    viewModel.startDripSession()
                     print(option)
                 }, label : {
                     Text("시작하기")
