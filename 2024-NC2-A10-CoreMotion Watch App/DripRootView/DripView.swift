@@ -79,6 +79,7 @@ struct DripView: View {
 //                          })
                 }
             }
+            .tint(.clear)
             
 
             Text("\(viewModel.dripSessionModel.waterQuantities.count+1)차 드립")

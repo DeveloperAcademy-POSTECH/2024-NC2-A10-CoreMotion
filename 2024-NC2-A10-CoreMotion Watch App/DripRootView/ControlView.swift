@@ -14,6 +14,7 @@ struct ControlView: View {
             HStack{
                 Button(
                     action : {
+                        viewModel.status = .complete
                         print("end dripSession")
                     }, label : {
                         ZStack{

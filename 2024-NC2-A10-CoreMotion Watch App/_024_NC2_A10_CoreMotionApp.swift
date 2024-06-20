@@ -20,7 +20,7 @@ struct _024_NC2_A10_CoreMotion_Watch_AppApp: App {
                 DripRootView(viewModel: viewModel)
             }
             else if viewModel.status == .complete {
-                DripEndView(viewModel: viewModel)
+                EndView(viewModel: viewModel)
             }
         }
     }

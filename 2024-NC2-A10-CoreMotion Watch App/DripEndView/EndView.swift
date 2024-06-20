@@ -13,7 +13,7 @@ struct EndView: View {
     var body: some View {
         VStack{
             HStack{
-                Text("2024. 06. 10")
+                Text(Date().formatted(.iso8601.year().month().day()))
                     .font(.custom("Pretendard-medium", size: 11))
                     .padding(.leading, 20)
                 Spacer()
@@ -65,36 +65,36 @@ struct EndView: View {
                         Text("차수")
                             .font(.custom("Pretendard-regular", size: 9))
                             .foregroundStyle(.waterBlue)
-                        List{
+
                             ForEach(Array(viewModel.dripSessionModel.waterQuantities.enumerated()), id: \.1) {(i, _) in
                                 Text("\(i+1)차")
                                     .font(.custom("Pretendard-Bold", size: 11))
                                     .foregroundStyle(.waterBlue)
-                            }}
+                            }
                     }
                     .padding(.leading, 20)
                     Spacer()
                     VStack(alignment: .leading, spacing: 6){
                         Text("분사량")
                             .font(.custom("Pretendard-regular", size: 9))
-                        List{
+
                             ForEach(Array(viewModel.dripSessionModel.waterQuantities.enumerated()), id: \.1) {(_, quantity) in
                                 Text("\(quantity)ml")
                                     .font(.custom("Pretendard-Bold", size: 11))
                                     .foregroundStyle(.waterBlue)
-                            }}
+                            }
                     }
                     .padding(.trailing, 6)
                     Spacer()
                     VStack(alignment: .leading, spacing: 6){
                         Text("분사 시간")
                             .font(.custom("Pretendard-regular", size: 9))
-                        List{
+
                             ForEach(Array(viewModel.dripSessionModel.pourTimeSums.enumerated()), id: \.1) {(i, pourTimeSum) in
                                 Text("\(pourTimeSum)초")
                                     .font(.custom("Pretendard-Bold", size: 11))
                                     .foregroundStyle(.waterBlue)
-                            }}
+                            }
                     }
                     .padding(.trailing, 22)
                 }
