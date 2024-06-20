@@ -14,10 +14,11 @@ struct DripRootView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            DripView(viewModel: viewModel)
             ControlView(viewModel: viewModel)
+            DripView(viewModel: viewModel)
+                .tag("default")
+            WaterView(viewModel: viewModel)
         }
-        
     }
 }
 

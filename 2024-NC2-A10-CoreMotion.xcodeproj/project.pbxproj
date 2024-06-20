@@ -112,6 +112,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A5346192C23FA0F00EBA5DA /* PreparingView */ = {
+			isa = PBXGroup;
+			children = (
+				1A5346132C23C99800EBA5DA /* PreparingView.swift */,
+				61AE490A2C233252009D13F4 /* StartView.swift */,
+				61AE49082C23324B009D13F4 /* Start2View.swift */,
+				1A5346152C23E41500EBA5DA /* HarioItemView.swift */,
+				1A5346172C23E60F00EBA5DA /* KalitaItemView.swift */,
+				61AE48FC2C23320B009D13F4 /* AmountView.swift */,
+			);
+			path = PreparingView;
+			sourceTree = "<group>";
+		};
+		1A53461A2C23FA4E00EBA5DA /* DripRootView */ = {
+			isa = PBXGroup;
+			children = (
+				1A53460F2C23C09100EBA5DA /* DripRootView.swift */,
+				61AE48FE2C233217009D13F4 /* ControlView.swift */,
+				61C323782C2342C70053C365 /* DripView.swift */,
+				61AE49002C23321F009D13F4 /* DripEndView.swift */,
+				61AE490C2C233258009D13F4 /* WaterView.swift */,
+			);
+			path = DripRootView;
+			sourceTree = "<group>";
+		};
+		1A53461B2C23FAC000EBA5DA /* DripEndView */ = {
+			isa = PBXGroup;
+			children = (
+				61AE49042C233239009D13F4 /* EndView.swift */,
+			);
+			path = DripEndView;
+			sourceTree = "<group>";
+		};
 		1AD1C40B2C21A698008C42D2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,22 +200,13 @@
 				616C2F432C1DA5C200F63BBA /* ContentView.swift */,
 				616C2F412C1DA5C200F63BBA /* _024_NC2_A10_CoreMotionApp.swift */,
 				616C2F452C1DA5C300F63BBA /* Assets.xcassets */,
+				1A5346192C23FA0F00EBA5DA /* PreparingView */,
+				1A53461A2C23FA4E00EBA5DA /* DripRootView */,
+				1A53461B2C23FAC000EBA5DA /* DripEndView */,
+				61AE49062C233243009D13F4 /* ListView.swift */,
 				616C2F472C1DA5C300F63BBA /* Preview Content */,
 				61C749142C1EF77800E2EEC9 /* WatchToiOSConnector.swift */,
 				1AD1C4122C22769F008C42D2 /* PredictManager.swift */,
-				1A5346132C23C99800EBA5DA /* PreparingView.swift */,
-				61AE490A2C233252009D13F4 /* StartView.swift */,
-				1A5346152C23E41500EBA5DA /* HarioItemView.swift */,
-				1A5346172C23E60F00EBA5DA /* KalitaItemView.swift */,
-				61AE49082C23324B009D13F4 /* Start2View.swift */,
-				61AE48FC2C23320B009D13F4 /* AmountView.swift */,
-				1A53460F2C23C09100EBA5DA /* DripRootView.swift */,
-				61C323782C2342C70053C365 /* DripView.swift */,
-				61AE490C2C233258009D13F4 /* WaterView.swift */,
-				61AE49002C23321F009D13F4 /* DripEndView.swift */,
-				61AE48FE2C233217009D13F4 /* ControlView.swift */,
-				61AE49042C233239009D13F4 /* EndView.swift */,
-				61AE49062C233243009D13F4 /* ListView.swift */,
 			);
 			path = "2024-NC2-A10-CoreMotion Watch App";
 			sourceTree = "<group>";

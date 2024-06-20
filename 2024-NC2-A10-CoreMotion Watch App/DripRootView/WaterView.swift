@@ -10,6 +10,8 @@ import SwiftUI
 struct WaterView: View {
     @State private var option = 110
     @State private var selectionOption = Array(10...500)
+    @ObservedObject var viewModel: ViewModel
+    
     var body: some View {
         
         VStack{
@@ -66,5 +68,5 @@ struct WaterView: View {
 }
 
 #Preview {
-    WaterView()
+    WaterView(viewModel: ViewModel())
 }

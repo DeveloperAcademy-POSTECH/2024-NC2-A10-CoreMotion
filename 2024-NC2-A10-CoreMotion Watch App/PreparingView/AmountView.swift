@@ -58,9 +58,16 @@ struct AmountView: View {
                 RoundedRectangle(cornerRadius: 20)
                     .frame(width: 156, height: 36)
                     .foregroundColor(.lightGreen)
-                Text("완료")
-                    .foregroundColor(.black)
-                    .font(.custom("Pretendard-Bold", size: 16))
+                Button(
+                    action:{
+                        viewModel.status = .ongoing
+                        viewModel.dripSessionModel.beanAmount = option
+                        print(option)
+                    }, label : {
+                        Text("시작하기")
+                            .foregroundColor(.black)
+                            .font(.custom("Pretendard-Bold", size: 16))
+                    })
             }
             .padding(.top)
 
