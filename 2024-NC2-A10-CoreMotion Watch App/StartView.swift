@@ -40,7 +40,6 @@ struct StartView: View {
                     AmountView(viewModel: viewModel, status: $status)
                         .onAppear(perform: {
                             viewModel.dripSessionModel.Dripper = "Hario"
-                            print(viewModel.dripSessionModel.Dripper)
                         })
                 } label: {
                     HarioItemView()
@@ -52,7 +51,6 @@ struct StartView: View {
                     AmountView(viewModel: viewModel, status: $status)
                         .onAppear(perform: {
                             viewModel.dripSessionModel.Dripper = "Kalita"
-                            print(viewModel.dripSessionModel.Dripper)
                         })
                 } label: {
                     KalitaItemView()
