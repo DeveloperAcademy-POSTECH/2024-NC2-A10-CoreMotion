@@ -11,12 +11,12 @@ struct WaterView: View {
     @State private var option = 110
     @State private var selectionOption = Array(10...500)
     @ObservedObject var viewModel: ViewModel
+    @Binding var selection: String
     
     var body: some View {
-        
         VStack{
             HStack{
-                Text("1차 분사량")
+                Text("\(viewModel.dripSessionModel.waterQuantities.count+1)차 분사량")
                     .font(.custom("Pretendard-Bold", size: 23))
                     .padding(.leading, 15)
                     .foregroundColor(.waterBlue)
@@ -56,6 +56,9 @@ struct WaterView: View {
             Button(
                 action: {
                     viewModel.dripSessionModel.waterQuantities.append(option)
+                    //다시 뷰로 돌아가기
+                    selection = "default"
+                    
                 }, label:{
                     Text("완료")
                         .foregroundColor(.black)
@@ -69,5 +72,5 @@ struct WaterView: View {
 }
 
 #Preview {
-    WaterView(viewModel: ViewModel())
+    WaterView(viewModel: ViewModel(), selection: .constant("default"))
 }

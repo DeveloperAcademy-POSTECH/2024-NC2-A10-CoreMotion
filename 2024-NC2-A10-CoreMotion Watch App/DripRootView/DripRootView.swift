@@ -10,14 +10,16 @@ import SwiftUI
 
 struct DripRootView: View {
     @ObservedObject var viewModel: ViewModel
-    @State private var selection = "default"
+    @State private var selection: String = "default"
     
     var body: some View {
         TabView(selection: $selection) {
             ControlView(viewModel: viewModel)
+                .tag("controlView")
             DripView(viewModel: viewModel)
                 .tag("default")
-            WaterView(viewModel: viewModel)
+            WaterView(viewModel: viewModel, selection: $selection)
+                .tag("waterView")
         }
     }
 }

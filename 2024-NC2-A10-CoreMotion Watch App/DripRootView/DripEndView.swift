@@ -25,7 +25,7 @@ struct DripEndView: View {
                     .foregroundColor(.orangeYellow)
             }
             
-            Text("1차 드립 완료")
+            Text("\(viewModel.dripSessionModel.waterQuantities.count)차 드립 완료")
                 .font(.custom("Pretendard-bold", size: 23))
                 .foregroundColor(.primaryYellow)
         }

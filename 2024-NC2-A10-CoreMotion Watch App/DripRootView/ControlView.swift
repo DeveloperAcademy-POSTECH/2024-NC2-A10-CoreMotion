@@ -76,7 +76,7 @@ struct ControlView: View {
                         Text("차수")
                             .font(.custom("Pretendard-medium", size: 9))
                     }
-                    Image(systemName: "1.circle")
+                    Image(systemName: "\(viewModel.dripSessionModel.waterQuantities.count+1).circle")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 22)

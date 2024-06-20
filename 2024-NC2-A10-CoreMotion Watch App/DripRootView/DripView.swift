@@ -81,7 +81,7 @@ struct DripView: View {
             }
             
 
-            Text("1차 드립")
+            Text("\(viewModel.dripSessionModel.waterQuantities.count+1)차 드립")
                 .font(.custom("Pretendard-bold", size: 23))
         }
     }
