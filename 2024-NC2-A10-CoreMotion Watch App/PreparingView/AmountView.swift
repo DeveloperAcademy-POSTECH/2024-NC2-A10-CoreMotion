@@ -24,53 +24,48 @@ struct AmountView: View {
                 
                 Spacer()
             }
-                HStack{
-                    ZStack{
-                        Picker("", selection: $option) {
-                            ForEach(0 ..< selectionOption.count) {
-                                Text(String(selectionOption[$0]))
-                            }
-                        }
-                        VStack{
-                            Spacer()
-                            RoundedRectangle(cornerRadius: 12)
-                                .frame(width: 125, height: 80)
-                                .opacity(0)
-                                .overlay(
-                                   RoundedRectangle(cornerRadius: 12)
-                                    .stroke(.primaryYellow, lineWidth: 2)
-                                   )
+            HStack{
+                ZStack{
+                    Picker("", selection: $option) {
+                        ForEach(0 ..< selectionOption.count) {
+                            Text(String(selectionOption[$0]))
                         }
                     }
-                    .pickerStyle(.wheel)
-                    .frame(width: 127, height: 97)
-                    .font(.system(size: 24))
-                    Text("g")
-                        .font(.custom("Pretendard-semiBold", size: 32))
-                        .foregroundColor(.primaryYellow)
-                        .padding(.leading, 5)
-                        .padding(.top)
+                    VStack{
+                        Spacer()
+                        RoundedRectangle(cornerRadius: 12)
+                            .frame(width: 125, height: 80)
+                            .opacity(0)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(.primaryYellow, lineWidth: 2)
+                            )
+                    }
                 }
-                .padding(.bottom, 10)
-
-            
-            ZStack{
-                RoundedRectangle(cornerRadius: 20)
-                    .frame(width: 156, height: 36)
-                    .foregroundColor(.lightGreen)
-                Button(
-                    action:{
-                        viewModel.status = .ongoing
-                        viewModel.dripSessionModel.beanAmount = option
-                        print(option)
-                    }, label : {
-                        Text("시작하기")
-                            .foregroundColor(.black)
-                            .font(.custom("Pretendard-Bold", size: 16))
-                    })
+                .pickerStyle(.wheel)
+                .frame(width: 127, height: 97)
+                .font(.system(size: 24))
+                Text("g")
+                    .font(.custom("Pretendard-semiBold", size: 32))
+                    .foregroundColor(.primaryYellow)
+                    .padding(.leading, 5)
+                    .padding(.top)
             }
+            .padding(.bottom, 10)
+            
+            Button(
+                action:{
+                    viewModel.status = .ongoing
+                    viewModel.dripSessionModel.beanAmount = option
+                    print(option)
+                }, label : {
+                    Text("시작하기")
+                        .foregroundColor(.black)
+                        .font(.custom("Pretendard-Bold", size: 16))
+                })
+            .background(Capsule().fill(.lightGreen))
             .padding(.top)
-
+            
         }
     }
 }

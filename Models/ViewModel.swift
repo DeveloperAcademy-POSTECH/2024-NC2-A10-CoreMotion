@@ -30,7 +30,7 @@ struct DripSessionModel {
     var Dripper: String = ""
     var beanAmount: Int = 0
     var pourTimeSums: [Double] = []
-    var waterQuantities: [Double] = []
+    var waterQuantities: [Int] = []
 }
 
 class ViewModel: ObservableObject {
