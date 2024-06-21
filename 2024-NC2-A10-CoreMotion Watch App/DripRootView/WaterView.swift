@@ -19,6 +19,7 @@ struct WaterView: View {
                 Text("\(viewModel.dripSessionModel.waterQuantities.count+1)차 분사량")
                     .font(.custom("Pretendard-Bold", size: 23))
                     .padding(.leading, 15)
+                    .padding(.bottom, -10)
                     .foregroundColor(.waterBlue)
                 
                 Spacer()
@@ -64,8 +65,9 @@ struct WaterView: View {
                         .foregroundColor(.black)
                         .font(.custom("Pretendard-Bold", size: 16))
                 })
+            .frame(width: 150, height: 50)
             .background(Capsule().fill(.lightGreen))
-            .padding(.top)
+//            .padding(.top)
             
         }
     }

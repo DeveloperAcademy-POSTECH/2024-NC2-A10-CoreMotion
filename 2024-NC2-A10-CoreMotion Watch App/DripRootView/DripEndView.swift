@@ -9,8 +9,8 @@ import SwiftUI
 
 struct DripEndView: View {
     @ObservedObject var viewModel: ViewModel
+    let pretendardBold = "Pretendard-Bold"
     var body: some View {
-        
         VStack{
             ZStack{
                 Circle()
@@ -26,7 +26,10 @@ struct DripEndView: View {
             }
             
             Text("\(viewModel.dripSessionModel.waterQuantities.count)차 드립 완료")
-                .font(.custom("Pretendard-bold", size: 23))
+//                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+//                .fontDesign(Font.pretendardBold)
+//                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .font(.custom(pretendardBold, size: 23))
                 .foregroundColor(.primaryYellow)
         }
     }
