@@ -20,6 +20,7 @@ struct AmountView: View {
                 Text("원두 양")
                     .font(.custom("Pretendard-Bold", size: 23))
                     .padding(.leading, 15)
+                    .padding(.bottom, -10)
                     .foregroundColor(.primaryYellow)
                 
                 Spacer()
@@ -65,9 +66,8 @@ struct AmountView: View {
                         .foregroundColor(.black)
                         .font(.custom("Pretendard-Bold", size: 16))
                 })
+            .frame(width: 150, height: 50)
             .background(Capsule().fill(.lightGreen))
-            .padding(.top)
-            
         }
     }
 }
