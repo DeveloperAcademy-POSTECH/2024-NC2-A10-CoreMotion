@@ -84,6 +84,9 @@ struct DripView: View {
 
             Text("\(viewModel.dripSessionModel.waterQuantities.count+1)차 드립")
                 .font(.custom("Pretendard-bold", size: 23))
+            Text("경과시간: \(String(format: "%.1f", viewModel.elapsedTime))초")
+            Text("분사시간: \(String(format: "%.1f", viewModel.pourTimeSum))초")
+            
         }
     }
 }

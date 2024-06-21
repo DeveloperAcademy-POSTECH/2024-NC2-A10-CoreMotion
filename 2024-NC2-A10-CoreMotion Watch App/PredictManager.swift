@@ -38,10 +38,10 @@ class PredictManager: ObservableObject {
     }
 
     func getLast100motionDataMLArray(_ dataArray: [Double]) -> MLMultiArray {
-        let count = min(50, dataArray.count)
+        let count = min(100, dataArray.count)
         let arr = getLastNElements(array: dataArray, count: count)
-        let paddedArray = arr + Array(repeating: 0.0, count: 50 - count)
-        let answer = try? MLMultiArray(shape: [50], dataType: .double)
+        let paddedArray = arr + Array(repeating: 0.0, count: 100 - count)
+        let answer = try? MLMultiArray(shape: [100], dataType: .double)
         for (index, element) in paddedArray.enumerated() {
             answer?[index] = NSNumber(value: element)
         }
